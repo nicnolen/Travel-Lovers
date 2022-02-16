@@ -10,9 +10,9 @@ app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
 app.get('/', (req, res) => {
-    res.send('Hello World!')
-  })
+  res.send('Hello World!');
+});
 
-app.listen(port,()=>{
-    console.log(`Now listening on port ${port}`);
+app.listen(port, () => {
+  console.log(`Now listening on port ${port}`);
 });
