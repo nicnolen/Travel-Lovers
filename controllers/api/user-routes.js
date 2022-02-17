@@ -58,9 +58,9 @@ router.post('/login', (req, res) => {
   User.findOne({
     // find a user with a matching email in req.body.email
     where: {
-      email: req.body.email
-    }
-  }).then(dbUserData => {
+      email: req.body.email,
+    },
+  }).then((dbUserData) => {
     // if a valid email isnt found then return a status code 400 indicating a bad request
     if (!dbUserData) {
       res.status(400).json({ message: 'No user with that email address!' });
@@ -68,11 +68,18 @@ router.post('/login', (req, res) => {
     }
 
     // otherwise, match the user password with the hashed password in the database
-    res.json({ user: dbUserData })
+    res.json({ user: dbUserData });
 
     // verify user
-    
-  })
+    const validPassword = dbUserData.checkPassword(req.body.password);
+    // check if the password is valid or not
+    if (!validPassword) {
+      res.status(400).json({ message: 'Incorrect password' });
+      return;
+    }
+
+    res.json({ user: dbUserData, message: 'Login successful' });
+  });
 });
 
 // PUT /api/users/1 (update user by id)
