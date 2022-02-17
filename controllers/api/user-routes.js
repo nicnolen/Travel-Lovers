@@ -19,7 +19,7 @@ router.get('/:id', (req, res) => {
   User.findOne({
     // find a user where the id value equals req.params.id value
     where: {
-      id: req.params.id, 
+      id: req.params.id,
     },
   })
     .then((dbUserData) => {
@@ -37,7 +37,20 @@ router.get('/:id', (req, res) => {
 });
 
 // POST /api/users (create a new user)
-router.post('/', (req, res) => {});
+router.post('/', (req, res) => {
+  // expects {username: 'Lernantino', email: 'lernantino@gmail.com', password: 'password1234'}
+  User.create({
+    // pass in key value pairs where keys are defined in User model and values are what you get from req.body
+    username: req.body.username,
+    email: req.body.email,
+    password: req.body.password,
+  })
+    .then((dbUserData) => res.json(dbUserData))
+    .catch((err) => {
+      console.error(err);
+      res.status(500).json(err);
+    });
+});
 
 // PUT /api/users/1 (update user by id)
 router.put('/:id', (req, res) => {});
