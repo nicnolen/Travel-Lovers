@@ -53,7 +53,26 @@ router.post('/', (req, res) => {
 });
 
 // PUT /api/users/1 (update user by id)
-router.put('/:id', (req, res) => {});
+router.put('/:id', (req, res) => {
+  // expects {username: 'Lernantino', email: 'lernantino@gmail.com', password: 'password1234'}
+  // if req.body has exact key/value pairs to match the model, you can just use `req.body` instead
+  User.update(req.body, {
+    where: {
+      id: req.params.id,
+    }, // req.body provides new data we want to use, req.params.id indicates where we want the new data to be used
+  })
+    .then((dbUserData) => {
+      if (!dbUserData[0]) {
+        res.status(404).json({ message: 'No user found with this id' });
+        return;
+      }
+      res.json(dbUserData);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.status(500).json(err);
+    });
+});
 
 // DELETE /api/users/1 (delete user by id)
 router.delete('/:id', (req, res) => {});
