@@ -15,7 +15,26 @@ router.get('/', (req, res) => {
 });
 
 // GET /api/users/1 (find users by id)
-router.get('/:id', (req, res) => {});
+router.get('/:id', (req, res) => {
+  User.findOne({
+    // find a user where the id value equals req.params.id value
+    where: {
+      id: req.params.id, 
+    },
+  })
+    .then((dbUserData) => {
+      // if there is a non existant id, send the client a 404 error indicating that they asked for the wrong piece of data
+      if (!dbUserData) {
+        res.status(404).json({ message: 'No user found with this id' });
+        return;
+      } // otherwise collect all users from the user table in the database and send it back as JSON
+      res.json(dbUserData);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.status(500).json(err);
+    });
+});
 
 // POST /api/users (create a new user)
 router.post('/', (req, res) => {});
