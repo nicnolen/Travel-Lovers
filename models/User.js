@@ -51,8 +51,15 @@ User.init(
       async beforeCreate(newUserData) {
         newUserData.password = await bcrypt.hash(newUserData.password, 10);
         return newUserData;
-      },
-    }, // pass in hooks to hash a password just before a user is created
+      }, // pass in hooks to hash a password just before a user is created
+      async beforeUpdate(updatedUserData) {
+        updatedUserData.password = await bcrypt.hash(
+          updatedUserData.password,
+          10
+        );
+        return updatedUserData;
+      }, // pass in a hook before the user is updated
+    },
     sequelize, // pass in imported sequelize connection (the direct connection to our database)
     timestamps: false, // don't automatically create createAt/updatedAt timestamp fields
     freezeTableName: true, // don't pluralize name of the database table
