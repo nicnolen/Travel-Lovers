@@ -53,7 +53,27 @@ router.post('/', (req, res) => {
 });
 
 // POST /api/users/login (verify the users identity with a login route)
-router.post('/login', (req, res) => {});
+router.post('/login', (req, res) => {
+  // expects {email: 'lernantino@gmail.com', password: 'password1234'}
+  User.findOne({
+    // find a user with a matching email in req.body.email
+    where: {
+      email: req.body.email
+    }
+  }).then(dbUserData => {
+    // if a valid email isnt found then return a status code 400 indicating a bad request
+    if (!dbUserData) {
+      res.status(400).json({ message: 'No user with that email address!' });
+      return;
+    }
+
+    // otherwise, match the user password with the hashed password in the database
+    res.json({ user: dbUserData })
+
+    // verify user
+    
+  })
+});
 
 // PUT /api/users/1 (update user by id)
 router.put('/:id', (req, res) => {
