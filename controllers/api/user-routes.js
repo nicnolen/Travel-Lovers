@@ -4,7 +4,15 @@ const router = require('express').Router();
 const { User } = require('../../models');
 
 // GET /api/users (find all users)
-router.get('/', (req, res) => {});
+router.get('/', (req, res) => {
+  // access our User model and run .findAll() method
+  User.findAll()
+    .then((dbUserData) => res.json(dbUserData)) // collect all users from the user table in the database and send it back as JSON
+    .catch((err) => {
+      console.error(err);
+      res.status(500).json(err);
+    });
+});
 
 // GET /api/users/1 (find users by id)
 router.get('/:id', (req, res) => {});
