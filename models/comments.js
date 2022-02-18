@@ -18,6 +18,13 @@ Comment.init(
                 len: [2]
             }
         },
+        user_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'user',
+                key: 'id'
+            }
+        }
     },
     {
         sequelize,
