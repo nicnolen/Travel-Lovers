@@ -6,7 +6,9 @@ const { User } = require('../../models');
 // GET /api/users (find all users)
 router.get('/', (req, res) => {
   // access our User model and run .findAll() method
-  User.findAll()
+  User.findAll({
+    attributes: { exclude: ['password'] }, // exclude the password column
+  })
     .then((dbUserData) => res.json(dbUserData)) // collect all users from the user table in the database and send it back as JSON
     .catch((err) => {
       console.error(err);
@@ -17,10 +19,10 @@ router.get('/', (req, res) => {
 // GET /api/users/1 (find users by id)
 router.get('/:id', (req, res) => {
   User.findOne({
-    // find a user where the id value equals req.params.id value
+    attributes: { exclude: ['password'] },
     where: {
       id: req.params.id,
-    },
+    }, // find a user where the id value equals req.params.id value
   })
     .then((dbUserData) => {
       // if there is a non existant id, send the client a 404 error indicating that they asked for the wrong piece of data
@@ -45,7 +47,17 @@ router.post('/', (req, res) => {
     email: req.body.email,
     password: req.body.password,
   })
-    .then((dbUserData) => res.json(dbUserData))
+    .then((dbUserData) => {
+      // access session information
+      req.session.save(() => {
+        req.session.user_id = dbUserData.id;
+        req.session.username = dbUserData.username;
+        req.session.loggedIn = true;
+
+        // convert the user data to json
+        res.json(dbUserData);
+      });
+    })
     .catch((err) => {
       console.error(err);
       res.status(500).json(err);
@@ -78,8 +90,27 @@ router.post('/login', (req, res) => {
       return;
     }
 
-    res.json({ user: dbUserData, message: 'Login successful' });
+    // access session information
+    req.session.save(() => {
+      req.session.user_id = dbUserData.id;
+      req.session.username = dbUserData.username;
+      req.session.loggedIn = true;
+
+      // convert response to json
+      res.json({ user: dbUserData, message: 'Login successful' });
+    });
   });
+});
+
+// POST /api/users/logout (logout route)
+router.post('/logout', (req, res) => {
+  if (req.session.loggedIn) {
+    req.session.destroy(() => {
+      res.status(204).end(); // status 204 means the session is successfully destroyed
+    });
+  } else {
+    res.status(404).end();
+  }
 });
 
 // PUT /api/users/1 (update user by id)
