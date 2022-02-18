@@ -47,7 +47,17 @@ router.post('/', (req, res) => {
     email: req.body.email,
     password: req.body.password,
   })
-    .then((dbUserData) => res.json(dbUserData))
+    .then((dbUserData) => {
+      // access session information
+      req.session.save(() => {
+        req.session.user_id = dbUserData.id;
+        req.session.username = dbUserData.username;
+        req.session.loggedIn = true;
+
+        // convert the user data to json
+        res.json(dbUserData);
+      });
+    })
     .catch((err) => {
       console.error(err);
       res.status(500).json(err);
@@ -80,8 +90,27 @@ router.post('/login', (req, res) => {
       return;
     }
 
-    res.json({ user: dbUserData, message: 'Login successful' });
+    // access session information
+    req.session.save(() => {
+      req.session.user_id = dbUserData.id;
+      req.session.username = dbUserData.username;
+      req.session.loggedIn = true;
+
+      // convert response to json
+      res.json({ user: dbUserData, message: 'Login successful' });
+    });
   });
+});
+
+// POST /api/users/logout (logout route)
+router.post('/logout', (req, res) => {
+  if (req.session.loggedIn) {
+    req.session.destroy(() => {
+      res.status(204).end(); // status 204 means the session is successfully destroyed
+    });
+  } else {
+    res.status(404).end();
+  }
 });
 
 // PUT /api/users/1 (update user by id)
