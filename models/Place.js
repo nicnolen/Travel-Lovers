@@ -2,10 +2,10 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 // create the places model
-class Places extends Model {}
+class Place extends Model {}
 
 // create fields for the places model
-Places.init(
+Place.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -30,4 +30,4 @@ Places.init(
     }
 );
 
-module.exports = Places;
+module.exports = Place;

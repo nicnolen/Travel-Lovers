@@ -1,7 +1,9 @@
-const router = require('express').Router();
+const Place = require('./Place');
+const Comment = require('./Comment');
 
-const userRoutes = require('./user-routes.js');
+// create associations
+Place.hasMany(Comment, {
+    foreignKey: 'places_id'
+})
 
-router.use('/users', userRoutes);
-
-module.exports = router;
+module.exports = { Place, Comment };
