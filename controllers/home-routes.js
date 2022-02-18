@@ -1,8 +1,8 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
-const { Places, Comment } = require('../models');
+const { Place, Comment } = require('../models');
 
 router.get('/', (req, res) => {
-    Places.findAll({})
+    Place.findAll({})
     res.render('homepage')
 })
