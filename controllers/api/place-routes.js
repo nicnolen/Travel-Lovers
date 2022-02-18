@@ -16,4 +16,4 @@ router.put('/:id', (req, res) => {});
 // delete a place
 router.delete('/:id', (req, res) => {});
 
-module.exports =router;
+module.exports = router;
