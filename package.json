@@ -5,9 +5,11 @@
   "main": "server.js",
   "scripts": {
     "test": "jest",
-    "start": "node server.js",
+    "start": "run-p sass:watch watch",
     "watch": "nodemon server.js",
-    "seeds": "node seeds/index.js"
+    "seeds": "node seeds/index.js",
+    "sass:build": "sass public/sass:public/stylesheets",
+    "sass:watch": "sass --watch public/sass:public/stylesheets"
   },
   "repository": {
     "type": "git",
@@ -27,6 +29,8 @@
     "express-handlebars": "^6.0.2",
     "express-session": "^1.17.2",
     "mysql2": "^2.3.3",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.49.8",
     "sequelize": "^6.16.1"
   },
   "devDependencies": {
