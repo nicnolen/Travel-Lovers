@@ -6,3 +6,5 @@ router.get('/', (req, res) => {
     Place.findAll({})
     res.render('homepage')
 })
+
+module.exports = router;
