@@ -6,7 +6,9 @@ const { User } = require('../../models');
 // GET /api/users (find all users)
 router.get('/', (req, res) => {
   // access our User model and run .findAll() method
-  User.findAll()
+  User.findAll({
+    attributes: { exclude: ['password'] }, // exclude the password column
+  })
     .then((dbUserData) => res.json(dbUserData)) // collect all users from the user table in the database and send it back as JSON
     .catch((err) => {
       console.error(err);
@@ -17,10 +19,10 @@ router.get('/', (req, res) => {
 // GET /api/users/1 (find users by id)
 router.get('/:id', (req, res) => {
   User.findOne({
-    // find a user where the id value equals req.params.id value
+    attributes: { exclude: ['password'] },
     where: {
       id: req.params.id,
-    },
+    }, // find a user where the id value equals req.params.id value
   })
     .then((dbUserData) => {
       // if there is a non existant id, send the client a 404 error indicating that they asked for the wrong piece of data

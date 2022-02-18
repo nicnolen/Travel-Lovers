@@ -6,8 +6,7 @@ const path = require('path'); // Import the Path module to work with directories
 const express = require('express');
 require('dotenv').config(); // Import and configure the dotenv dependency so we can use process.env for sensitive information
 const sequelize = require('./config/connection');
-
-//handlebar setup - Christian Ramirez
+// Handlebar setup
 const exphbs = require('express-handlebars');
 const hbs = exphbs.create({});
 
