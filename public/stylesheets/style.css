@@ -1,0 +1,10 @@
+/* kanban board css */
+.container {
+    width: 70%;
+    min-width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* end of kanban board css */

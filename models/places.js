@@ -17,6 +17,10 @@ Places.init(
             type: DataTypes.TEXT,
             allowNull: false
         },
+        date: {
+            type: DataTypes.DATEONLY,
+            allowNull: false
+        }
     },
     {
         sequelize,
