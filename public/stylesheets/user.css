@@ -1,17 +1,11 @@
-/* Error: Undefined variable.
- *   ,
- * 4 |   background-color: index.$primary-color
- *   |                     ^^^^^^^^^^^^^^^^^^^^
- *   '
- *   public\sass\user.sass 4:21  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a   \2577 \a 4 \2502    background-color: index.$primary-color\d\a   \2502                      ^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   public\\sass\\user.sass 4:21  root stylesheet";
+body {
+  font: 100% Helvetica, sans-serif;
+  color: #333;
 }
+
+.inverse {
+  background-color: #333;
+  color: white;
+}
+
+/*# sourceMappingURL=user.css.map */
