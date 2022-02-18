@@ -1,10 +1,9 @@
-/* USED FOR COLLECTING THE API ROUTES AND PACKAGING THEM */
-// Import files and dependencies
 const router = require('express').Router();
-const userRoutes = require('./user-routes.js');
 
-// Put the /users prefix before all the user routes
-router.use('/users', userRoutes);
+const commentRoutes = require('./comment-routes');
+const placeRoutes = require('./place-routes');
 
-// Export module
+router.use('/places', placeRoutes);
+router.use('/comments', commentRoutes);
+
 module.exports = router;

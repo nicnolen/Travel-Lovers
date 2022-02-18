@@ -1,10 +1,12 @@
 /* USED TO COLLECT THE PACKAGED API ROUTES */
 // Import files and dependencies
 const router = require('express').Router();
-const apiRoutes = require('./api');
+const apiRoutes = require('./api')
+const homeRoutes = require('./home-routes');
 
 // Prefix the routes in the api folder with /api
 router.use('/api', apiRoutes);
+router.use('/', homeRoutes);
 
 // Error if there is a request to an incorrect endpoint
 router.use((req, res) => {
