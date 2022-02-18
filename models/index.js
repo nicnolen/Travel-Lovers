@@ -3,7 +3,7 @@ const Comment = require('./Comment');
 
 // create associations
 Place.hasMany(Comment, {
-    foreignKey: 'places_id'
+    foreignKey: 'place_id'
 })
 
 module.exports = { Place, Comment };

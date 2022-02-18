@@ -26,7 +26,7 @@ Place.init(
         sequelize,
         freezeTableName: true, // model tablename will be the same as model name
         underscored: true,
-        modelName: 'places'
+        modelName: 'place'
     }
 );
 
