@@ -90,7 +90,15 @@ router.post('/login', (req, res) => {
       return;
     }
 
-    res.json({ user: dbUserData, message: 'Login successful' });
+    // access session information
+    req.session.save(() => {
+      req.session.user_id = dbUserData.id;
+      req.session.username = dbUserData.username;
+      req.session.loggedIn = true;
+
+      // convert response to json
+      res.json({ user: dbUserData, message: 'Login successful' });
+    });
   });
 });
 
