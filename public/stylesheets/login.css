@@ -52,4 +52,25 @@ footer {
   font-weight: bold;
 }
 
-/*# sourceMappingURL=style.css.map */
+/* LOGIN STYLES */
+body {
+  margin: 0 auto;
+  background: url(/assets/images/airplane-taking-off.jpg);
+  background-postition: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+button {
+  background-color: #fA8Bff;
+  background-image: linear-gradient(45deg, #fA8Bff 0%, #2bd2ff 52%, #2bff88 90%);
+  transition: all 0.5s ease-out;
+  background-size: 1px 100px;
+  background-position: 0 -10px;
+}
+button:hover {
+  background-position: 1px -50px;
+  color: #ffffff;
+}
+
+/*# sourceMappingURL=login.css.map */
