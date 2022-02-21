@@ -13,21 +13,24 @@
   </head>
 
   <body>
-    <div class='wrapper'>
-      <header>
-        <h1>
-          Travel Lovers
-        </h1>
-        <nav>
-          <a href='/'>Homepage</a>
-          <a href='/login'>Login</a>
-        </nav>
+      <header class="is-flex is-flex-direction-row">
+        <div class="is-justify-content-space-between">
+          <h1>
+            Travel Lovers      
+            <nav>
+              <a href='/'>Homepage</a>
+              <a href='/login'>Login</a>
+            </nav>
+          </h1>
+        </div>
       </header>
-      <main>
+      <main class='wrapper is-flex is-flex-direction-column'>
         {{{body}}}
       </main>
-      <footer>
+      <footer class="footer">
+        <div class="content has-text-centered">
         Thanks for visiting!
+        </div>
       </footer>
     </div>
 
