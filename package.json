@@ -5,8 +5,11 @@
   "main": "server.js",
   "scripts": {
     "test": "jest",
-    "start": "node server.js",
-    "watch": "nodemon server.js"
+    "start": "run-p sass:watch watch",
+    "watch": "nodemon server.js",
+    "seeds": "node seeds/index.js",
+    "sass:build": "sass public/sass:public/stylesheets",
+    "sass:watch": "sass --watch public/sass:public/stylesheets"
   },
   "repository": {
     "type": "git",

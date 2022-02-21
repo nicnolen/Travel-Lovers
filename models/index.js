@@ -1,6 +1,7 @@
-const router = require('express').Router();
+const Place = require('./Place');
+const Comment = require('./Comment');
+const User = require('./User');
 
-const userRoutes = require('./user-routes.js');
 // create associations
 Place.hasMany(Comment, {
     foreignKey: 'place_id',
@@ -11,6 +12,6 @@ Comment.belongsTo(User, {
     onDelete: 'CASCADE'
 });
 
-router.use('/users', userRoutes);
+// router.use('/users', userRoutes);
 
-module.exports = router;
+module.exports = { Place, Comment, User };
