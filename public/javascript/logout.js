@@ -17,3 +17,6 @@ async function logout() {
     errorEl.innerHTML = response.statusText;
   }
 }
+
+// EVENT LISTENERS
+document.querySelector('#logout').addEventListener('click', logout);
