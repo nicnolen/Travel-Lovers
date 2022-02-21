@@ -7,10 +7,7 @@ router.get('/', (req, res) => {});
 // GET /api/users/1
 router.get('/:id', (req, res) => {});
 
-<<<<<<< Updated upstream
-// POST /api/users
-router.post('/', (req, res) => {});
-=======
+
 // POST /api/users (create a new user)
 router.post('/', (req, res) => {
   // expects {username: 'Lernantino', email: 'lernantino@gmail.com', password: 'password1234'}
@@ -27,8 +24,10 @@ router.post('/', (req, res) => {
         req.session.user_id = dbUserData.id;
         req.session.username = dbUserData.username;
         req.session.loggedIn = true;
->>>>>>> Stashed changes
-
+      
+      })
+    })
+  })
 // PUT /api/users/1
 router.put('/:id', (req, res) => {});
 
