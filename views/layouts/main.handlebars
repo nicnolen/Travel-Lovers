@@ -14,13 +14,17 @@
 
   <body>
       <header class="is-flex is-flex-direction-row">
-        <nav class="is-justify-content-space-between">
+        <nav class="is-justify-content-space-evenly">
           <h1>
             Travel Lovers      
           </h1>
-          <a href='/'>Homepage</a>
-          <a href='/login'>Login</a>
-          <button id="logout">Logout</button>
+          <button class="btn-homepage"><a href='/'>Homepage</a></button>
+          {{#if loggedIn}}
+            <button class="btn-logout">Logout</button>
+            <div id="error-message"></div>
+          {{else}}
+            <button class="btn-login"><a href='/login'>Login</a></button>
+          {{/if}}
         </nav>
       </header>
       <main class='wrapper is-flex is-flex-direction-column'>
@@ -32,7 +36,9 @@
         </div>
       </footer>
     </div>
+    {{#if loggedIn}}
       <script src='/javascript/logout.js'></script>
+    {{/if}}
   </body>
 
 </html>
