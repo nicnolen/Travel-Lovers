@@ -1,6 +1,7 @@
 const Place = require('./Place');
 const Comment = require('./Comment');
 const User = require('./User');
+const Post = require('./Post');
 
 // create associations
 Place.hasMany(Comment, {
@@ -12,6 +13,5 @@ Comment.belongsTo(User, {
     onDelete: 'CASCADE'
 });
 
-// router.use('/users', userRoutes);
 
-module.exports = { Place, Comment, User };
+module.exports = { Place,Post, Comment, User };

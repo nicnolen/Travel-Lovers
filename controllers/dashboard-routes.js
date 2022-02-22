@@ -1,84 +1,66 @@
-// const router = require('express').Router();
-// const { Gallery, Painting, Place } = require('../models');
-// // Import the custom middleware
-// // const withAuth = require('../utils/auth');
+const router = require("express").Router();
+const {Place, User, Post } = require("../models/");
+const withAuth = require("../utils/auth");
 
-// // GET all place for homepage
-// router.get('/place', async (req, res) => {
-//   try {
-//     const dbPlaceData = await Place.findAll({
-//       include: [
-//         {
-//           model: Place,
-//           attributes: ['city', 'date'],
-//         },
-//       ],
-//     });
+// GET all place for homepage
+// router.get("/bucket-list", withAuth, (req, res) => {
+//     Place.findAll({
+//         // include: [User],
+//         // where: {
+//         //     userId: req.session.userId
+//         // }
+//     })
 
-//     const places = dbPlaceData.map((gallery) =>
-//         place.get({ plain: true })
-//     );
+//         .then((dbPlaceData) => {
+//             const places = dbPlaceData.map((place) => place.get({ plain: true }));
+  
+//             res.render("bucket-list", {
+//                 layout: "dashboard",
+//                 places });
+//         })
+//         .catch((err) => {
+//             res.status(500).json(err);
+//         });
+//   });
 
-//     res.render('homepage', {
-//         places,
-//       loggedIn: req.session.loggedIn,
-//     });
-//   } catch (err) {
-//     console.log(err);
-//     res.status(500).json(err);
-//   }
+//   / GET all place for homepage
+  router.get("/", (req, res) => {
+    Place.findAll({
+        // include: [User],
+    })
+        .then((dbPlaceData) => {
+            const places = dbPlaceData.map((place) => place.get({ plain: true }));
+  
+            res.render("homepage", {
+                places });
+        })
+        .catch((err) => {
+            res.status(500).json(err);
+        });
+  });
+
+// router.get("/new", withAuth, (req, res) => {
+// res.render("new-post", {
+//     layout: "dashboard"
 // });
-
-// // GET one gallery
-// // Use the custom middleware before allowing the user to access the gallery
-// router.get('/place/:id', withAuth, async (req, res) => {
-//   try {
-//     const dbPlaceData = await Place.findByPk(req.params.id, {
-//       include: [
-//         {
-//           model: Painting,
-//           attributes: [
-//             'id',
-//             'title',
-//             'artist',
-//             'exhibition_date',
-//             'filename',
-//             'description',
-//           ],
-//         },
-//       ],
-//     });
-
-//     const place = dbPlaceData.get({ plain: true });
-//     res.render('place', { place, loggedIn: req.session.loggedIn });
-//   } catch (err) {
-//     console.log(err);
-//     res.status(500).json(err);
-//   }
 // });
+  
+// router.get("/edit/:id", withAuth, (req, res) => {
+//     Post.findByPk(req.params.id)
+//         .then(dbPostData => {
+//             if (dbPostData) {
+//                 const post = dbPostData.get({ plain: true });
 
-// // GET one painting
-// // Use the custom middleware before allowing the user to access the painting
-// // router.get('/painting/:id', withAuth, async (req, res) => {
-// //   try {
-// //     const dbPaintingData = await Painting.findByPk(req.params.id);
-
-// //     const painting = dbPaintingData.get({ plain: true });
-
-// //     res.render('painting', { painting, loggedIn: req.session.loggedIn });
-// //   } catch (err) {
-// //     console.log(err);
-// //     res.status(500).json(err);
-// //   }
-// // });
-
-// // router.get('/login', (req, res) => {
-// //   if (req.session.loggedIn) {
-// //     res.redirect('/');
-// //     return;
-// //   }
-
-// //   res.render('login');
-// // });
-
-// module.exports = router;
+//                 res.render("edit-post", {
+//                     layout: "dashboard",
+//                     post
+//                 });
+//             } else {
+//                 res.status(404).end();
+//             }
+//         })
+//         .catch(err => {
+//             res.status(500).json(err);
+//         });
+// });
+  module.exports = router;
