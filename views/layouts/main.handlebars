@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang='en'>
 
   <head>
@@ -14,31 +13,30 @@
   </head>
 
   <body>
-      <header class="is-flex is-flex-direction-row">
-        <nav class="is-justify-content-space-evenly">
-          <h1>
-            Travel Lovers      
-          </h1>
-          <button class="btn-homepage"><a href='/'>Homepage</a></button>
-          {{#if loggedIn}}
-            <button id='logout' class="btn-logout"><a href='/'>Logout</a></button>
-            <div id="error-message"></div>
-          {{else}}
-            <button class="btn-login"><a href='/login'>Login</a></button>
-            <div id='error-message'></div>
-          {{/if}}
-        </nav>
-      </header>
-      <main class='wrapper is-flex is-flex-direction-column'>
-        {{{body}}}
-      </main>
-      <footer class="footer">
-        <div class="content has-text-centered">
+    <header class='is-flex is-flex-direction-row'>
+      <nav class='is-justify-content-space-evenly'>
+        <h1>
+          Travel Lovers
+        </h1>
+        <button class='btn-homepage'><a href='/'>Homepage</a></button>
+        {{#if loggedIn}}
+          <button id='logout' class='btn-logout'>Logout</button>
+          <div id='error-message'></div>
+        {{else}}
+          <button class='btn-login'><a href='/login'>Login</a></button>
+          <div id='error-message'></div>
+        {{/if}}
+      </nav>
+    </header>
+    <main class='wrapper is-flex is-flex-direction-column'>
+      {{{body}}}
+    </main>
+    <footer class='footer'>
+      <div class='content has-text-centered'>
         Thanks for visiting!
-        </div>
-      </footer>
-    </div>
-    
+      </div>
+    </footer>
+
     {{#if loggedIn}}
       <script src='/javascript/logout.js'></script>
     {{/if}}

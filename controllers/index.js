@@ -7,8 +7,8 @@ const dashboardRoutes = require('./dashboard-routes.js');
 
 
 // Prefix the routes in the api folder with /api
-router.use('/api', apiRoutes);
 router.use('/', homeRoutes);
+router.use('/api', apiRoutes);
 router.use('/dashboard', dashboardRoutes);
 
 // Error if there is a request to an incorrect endpoint

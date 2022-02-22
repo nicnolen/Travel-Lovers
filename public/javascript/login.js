@@ -54,6 +54,8 @@ async function loginFormHandler(event) {
     });
 
     if (response.ok) {
+      // clear error
+      errorEl.innerHTML = '';
       document.location.replace('/');
     } else {
       errorEl.innerHTML = response.statusText;

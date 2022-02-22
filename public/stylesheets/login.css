@@ -1,4 +1,8 @@
 /* BASE REUSABLE STYLESHEET */
+body, html {
+  min-height: 100%;
+}
+
 .wrapper {
   width: 100%;
   min-height: 100%;
@@ -6,17 +10,12 @@
   margin: 0 auto;
 }
 
-#error-message {
-  color: #2bd2ff;
-  font-weight: bold;
-}
-
 nav {
   background-color: #ff3399;
   background-image: linear-gradient(to bottom, #0000cc 0%, #ff3399 100%);
   color: #ffffff;
   transition: all 0.5s ease-out;
-  background-size: 1px 150px;
+  background-size: 1px 100px;
   background-position: 0 -10px;
   padding: 2vh;
   min-width: 100vw;
@@ -53,7 +52,7 @@ button {
   background-color: #ff3399;
   background-image: linear-gradient(45deg, #ff3399 0%, #2bd2ff 52%, #2bff88 90%);
   transition: all 0.5s ease-out;
-  background-size: 1px 150px;
+  background-size: 1px 100px;
   background-position: 0 -10px;
 }
 .btn-login:hover, .btn-save:hover, .btn-add:hover, .btn-homepage:hover {
@@ -64,7 +63,7 @@ button {
   background-color: #ea0028;
   background-image: linear-gradient(180deg, #ff9a8b 0%, #ea0028 100%);
   transition: all 0.5s ease-out;
-  background-size: 1px 150px;
+  background-size: 1px 100px;
   background-position: 0 -10px;
 }
 .btn-delete:hover, .btn-logout:hover {
@@ -77,11 +76,14 @@ footer {
   height: 2vh;
   background-color: #ea0028;
   background-image: linear-gradient(180deg, #ff9a8b 0%, #ea0028 100%);
-  background-size: 1px 50vw;
+  background-size: 1px 150px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 /* LOGIN STYLES */
-html, body {
+html {
   margin: 0 auto;
   background: url(/assets/images/airplane-taking-off.jpg);
   background-postition: center;
