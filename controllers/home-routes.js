@@ -4,7 +4,11 @@ const { Place, Comment } = require('../models');
 
 router.get('/', (req, res) => {
     Place.findAll({})
-    res.render('homepage')
+    .then(dbData => {
+        console.log(dbData);
+        res.render('homepage');
+    })
+    
 })
 
 module.exports = router;
