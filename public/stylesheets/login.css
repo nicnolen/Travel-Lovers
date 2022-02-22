@@ -44,7 +44,7 @@ button {
   border: 0;
   padding: 1%;
   font-weight: bold;
-  curser: pointer;
+  cursor: pointer;
   border-radius: 5px;
 }
 
@@ -86,7 +86,7 @@ footer {
 html {
   margin: 0 auto;
   background: url(/assets/images/airplane-taking-off.jpg);
-  background-postition: center;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
