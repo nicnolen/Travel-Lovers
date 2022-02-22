@@ -103,8 +103,7 @@ router.post('/login', (req, res) => {
 router.post('/logout', (req, res) => {
   if (req.session.loggedIn) {
     req.session.destroy(() => {
-      // 204 tells client that request succeeded
-      res.status(204).end();
+      res.status(204).end(); // status 204 means the session is successfully destroyed
     });
   } else {
     res.status(404).end();
