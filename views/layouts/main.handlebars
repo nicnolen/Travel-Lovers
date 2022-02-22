@@ -18,14 +18,19 @@
         <h1>
           Travel Lovers
         </h1>
-        <button class='btn-homepage'><a href='/'>Homepage</a></button>
-        {{#if loggedIn}}
-          <button id='logout' class='btn-logout'>Logout</button>
-          <div id='error-message'></div>
-        {{else}}
-          <button class='btn-login'><a href='/login'>Login</a></button>
-          <div id='error-message'></div>
-        {{/if}}
+        <span class="is-align-items-flex-end">
+          <button class='btn-nav'><a href='/'>Homepage</a></button>
+          {{#if loggedIn}}
+            <button class='btn-nav'><a
+                href='/bucket-list'
+              >Dashboard</a></button>
+            <button id='logout' class='btn-logout'>Logout</button>
+            <div id='error-message'></div>
+          {{else}}
+            <button class='btn-nav'><a href='/login'>Login</a></button>
+            <div id='error-message'></div>
+          {{/if}}
+        </span>
       </nav>
     </header>
     <main class='wrapper is-flex is-flex-direction-column'>

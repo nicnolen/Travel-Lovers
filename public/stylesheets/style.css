@@ -10,12 +10,17 @@ body, html {
   margin: 0 auto;
 }
 
+h1 {
+  font-size: 4vh;
+  padding-right: 2vw;
+}
+
 nav {
   background-color: #ff3399;
   background-image: linear-gradient(to bottom, #0000cc 0%, #ff3399 100%);
   color: #ffffff;
   transition: all 0.5s ease-out;
-  background-size: 1px 100px;
+  background-size: 1px 150px;
   background-position: 0 -10px;
   padding: 2vh;
   min-width: 100vw;
@@ -48,14 +53,14 @@ button {
   border-radius: 5px;
 }
 
-.btn-login, .btn-save, .btn-add, .btn-homepage {
+.btn-nav, .btn-login, .btn-save, .btn-add {
   background-color: #ff3399;
   background-image: linear-gradient(45deg, #ff3399 0%, #2bd2ff 52%, #2bff88 90%);
   transition: all 0.5s ease-out;
-  background-size: 1px 100px;
+  background-size: 1px 130px;
   background-position: 0 -10px;
 }
-.btn-login:hover, .btn-save:hover, .btn-add:hover, .btn-homepage:hover {
+.btn-nav:hover, .btn-login:hover, .btn-save:hover, .btn-add:hover {
   background-position: 1px -50px;
 }
 
@@ -63,7 +68,7 @@ button {
   background-color: #ea0028;
   background-image: linear-gradient(180deg, #ff9a8b 0%, #ea0028 100%);
   transition: all 0.5s ease-out;
-  background-size: 1px 100px;
+  background-size: 1px 150px;
   background-position: 0 -10px;
 }
 .btn-delete:hover, .btn-logout:hover {
@@ -77,9 +82,6 @@ footer {
   background-color: #ea0028;
   background-image: linear-gradient(180deg, #ff9a8b 0%, #ea0028 100%);
   background-size: 1px 150px;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

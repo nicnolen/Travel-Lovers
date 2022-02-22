@@ -1,5 +1,5 @@
 {
-  "name": "travel-app",
+  "name": "travel-lover",
   "version": "1.0.0",
   "description": "Travel app that allows people to add destinations to a bucket list, seasonal, planned and already visited",
   "main": "server.js",
