@@ -4,15 +4,6 @@ const { Place, Comment } = require('../models');
 
 // GET homepage for Place
 router.get('/', (req, res) => {
-<<<<<<< HEAD
-    Place.findAll({})
-    .then(dbData => {
-        console.log(dbData);
-        res.render('homepage');
-    })
-    
-})
-=======
   Place.findAll({})
     .then((dbPostData) => {
       // loop over and map each Sequelize object into a serialized version, saving results in a new `posts` array
@@ -27,7 +18,6 @@ router.get('/', (req, res) => {
       res.status(500).json(err);
     });
 });
->>>>>>> ce0bafd041a107cc2537382301d7964b1b031914
 
 // GET route to login page
 router.get('/login', (req, res) => {
