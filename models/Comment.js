@@ -24,6 +24,13 @@ Comment.init(
                 model: 'user',
                 key: 'id'
             }
+        },
+        place_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'place',
+                key: 'id'
+            }
         }
     },
     {

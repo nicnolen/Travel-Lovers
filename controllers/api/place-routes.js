@@ -1,15 +1,19 @@
 const router = require('express').Router();
-const { Place } = require('../../models')
+const { Place, Comment, User } = require('../../models')
 
-// get all places
-router.get('/', (req, res) => {
-    Place.findAll()
-    .then(dbPlaceData => res.json(dbPlaceData))
-    .catch(err => {
-        console.error(err);
-        res.status(500).json(err);
-    });
-});
+// // get all places
+// router.get('/', (req, res) => {
+//     Place.findAll()
+//     .then(places => {
+//         res.json(places)
+//         res.render('/bucket-list', places);
+
+//     })
+//     .catch(err => {
+//         console.error(err);
+//         res.status(500).json(err);
+//     });
+// });
 
 // get a single place
 router.get('/:id',(req, res) => {

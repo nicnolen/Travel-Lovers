@@ -1,32 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Travel=App</title>
-  {{!-- <link rel="stylesheet" href="/stylesheets/style.css"> --}}
-  {{!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="/resources/demos/style.css"> --}}
-</head>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>Travel Lovers</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <!-- Link Bulma CSS -->
+    <link
+      rel='stylesheet'
+      href='https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css'
+    />
+  </head>
 
-<body>
-  <div class="wrapper">
-    <header>
-      <h1>
-        <a href="/">Travel-App</a>
-      </h1>
+  <body>
+    <header class='is-flex is-flex-direction-row'>
+      <nav class='is-justify-content-space-evenly'>
+        <h1>
+          Travel Lovers
+        </h1>
+        <button class='btn-homepage'><a href='/'>Homepage</a></button>
+        {{#if loggedIn}}
+          <button id='logout' class='btn-logout'>Logout</button>
+          <div id='error-message'></div>
+        {{else}}
+          <button class='btn-login'><a href='/login'>Login</a></button>
+          <div id='error-message'></div>
+        {{/if}}
+      </nav>
     </header>
-    <main>
-      {{{ body }}}
+    <main class='wrapper is-flex is-flex-direction-column'>
+      {{{body}}}
     </main>
-    <footer>
-      Thanks for visiting!
+    <footer class='footer'>
+      <div class='content has-text-centered'>
+        Thanks for visiting!
+      </div>
     </footer>
-  </div>
-  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
-  <script src="/javascript/datepicker.js"></script>
-</body>
+
+    {{#if loggedIn}}
+      <script src='/javascript/logout.js'></script>
+    {{/if}}
+  </body>
 
 </html>
