@@ -49,7 +49,6 @@ router.post('/', (req, res) => {
   })
     .then((dbUserData) => {
       // access session information
-      console.log("hello");
       req.session.save(() => {
         req.session.user_id = dbUserData.id;
         req.session.username = dbUserData.username;
@@ -79,9 +78,6 @@ router.post('/login', (req, res) => {
       res.status(400).json({ message: 'No user with that email address!' });
       return;
     }
-
-    // otherwise, match the user password with the hashed password in the database
-    res.json({ user: dbUserData });
 
     // verify user
     const validPassword = dbUserData.checkPassword(req.body.password);
