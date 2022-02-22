@@ -1,16 +1,30 @@
-<div class="container">
-    <div class="board">
-        <div class="block" id="bucketlist">
-            <h1>Bucketlist</h1>
-        </div>
-        <div class="block" id="visiting">
-            <h1>Visiting</h1>
-        </div>
-        <div class="block" id="visited">
-            <h1>Visited</h1>
-        </div>
+<div class='container'>
+  <div class='board'>
+    <div class='block' id='bucketlist'>
+      <h1>Bucketlist</h1>
     </div>
+<<<<<<< HEAD
 </div>
 <div>
     <p>Date: <input type="text" id="datepicker"></p>
+=======
+    <div class='block' id='visiting'>
+      <h1>Visiting</h1>
+    </div>
+    <div class='block' id='visited'>
+      <h1>Visited</h1>
+    </div>
+    <div class='block' id='dashboard'>
+      <a href='/bucket-list'>Dashboard</a>
+    </div>
+  </div>
+  <div>
+    {{#each places}}
+      <div>
+        City
+        {{city}}
+      </div>
+    {{/each}}
+  </div>
+>>>>>>> ce0bafd041a107cc2537382301d7964b1b031914
 </div>

@@ -79,9 +79,6 @@ router.post('/login', (req, res) => {
       return;
     }
 
-    // otherwise, match the user password with the hashed password in the database
-    res.json({ user: dbUserData });
-
     // verify user
     const validPassword = dbUserData.checkPassword(req.body.password);
     // check if the password is valid or not
