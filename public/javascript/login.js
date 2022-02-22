@@ -1,8 +1,9 @@
-/* LOGIN PAGE FRONT END LOGIC */
+/* FRONT END JAVASCRIPT CODE FOR THE LOGIN PAGE */
 // Reference error messages
 const errorEl = document.getElementById('error-message');
 
-// Signup form handler
+// HANDLER FUNCTIONS
+// Function to handle signup form
 async function signupFormHandler(event) {
   event.preventDefault();
 
@@ -10,8 +11,10 @@ async function signupFormHandler(event) {
   const email = document.querySelector('#email-signup').value.trim();
   const password = document.querySelector('#password-signup').value.trim();
 
-  // If there is a username, email and password then make a post method
   if (username && email && password) {
+    // clear error messages
+    errorEl.innerHTML = '';
+
     const response = await fetch('/api/users', {
       method: 'post',
       body: JSON.stringify({
@@ -32,8 +35,39 @@ async function signupFormHandler(event) {
   }
 }
 
+// Function to handle login form
+async function loginFormHandler(event) {
+  event.preventDefault();
+
+  const email = document.querySelector('#email-login').value.trim();
+  const password = document.querySelector('#password-login').value.trim();
+
+  // if there is a valid email and password
+  if (email && password) {
+    const response = await fetch('/api/users/login', {
+      method: 'post', // what method we are using in the request
+      body: JSON.stringify({
+        email,
+        password,
+      }),
+      headers: { 'Content-Type': 'application/json' },
+    });
+
+    if (response.ok) {
+      document.location.replace('/');
+    } else {
+      errorEl.innerHTML = response.statusText;
+    }
+  }
+}
+
 // EVENT LISTENERS
-// Signup event listener
+// Event listener for the signup form
 document
   .querySelector('.signup-form')
   .addEventListener('submit', signupFormHandler);
+
+// Event listener for the login form
+document
+  .querySelector('.login-form')
+  .addEventListener('submit', loginFormHandler);

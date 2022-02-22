@@ -20,10 +20,11 @@
           </h1>
           <button class="btn-homepage"><a href='/'>Homepage</a></button>
           {{#if loggedIn}}
-            <button class="btn-logout">Logout</button>
+            <button id='logout' class="btn-logout"><a href='/'>Logout</a></button>
             <div id="error-message"></div>
           {{else}}
             <button class="btn-login"><a href='/login'>Login</a></button>
+            <div id='error-message'></div>
           {{/if}}
         </nav>
       </header>
@@ -36,6 +37,7 @@
         </div>
       </footer>
     </div>
+    
     {{#if loggedIn}}
       <script src='/javascript/logout.js'></script>
     {{/if}}
