@@ -24,15 +24,15 @@
           />
         </a>
         <span class='is-align-items-center'>
-          <button class='btn-nav'><a href='/'>Homepage</a></button>
+          <a href='/'><button class='btn-nav'>Homepage</button></a>
           {{#if loggedIn}}
-            <button class='btn-nav'><a
+            <a
                 href='/bucket-list'
-              >Dashboard</a></button>
+              ><button class='btn-nav'>Dashboard</button></a>
             <button id='logout' class='btn-logout'>Logout</button>
             <div id='error-message'></div>
           {{else}}
-            <button class='btn-nav'><a href='/login'>Login</a></button>
+            <a href='/login'><button class='btn-nav'>Login</button></a>
             <div id='error-message'></div>
           {{/if}}
         </span>

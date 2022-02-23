@@ -30,22 +30,22 @@ h1, nav {
   display: inline-block;
 }
 
-a {
+a, button {
   text-decoration: none;
   font-weight: bold;
   color: #225ca3;
   transition: color 0.1s;
 }
-a:hover {
+a:hover, button:hover {
   font-weight: bold;
   color: #ea0028;
 }
 
 label {
-  font-weight: bold;
+  font-weight: bolder;
 }
 
-button {
+button, input {
   border: 0;
   padding: 1%;
   font-weight: bold;
