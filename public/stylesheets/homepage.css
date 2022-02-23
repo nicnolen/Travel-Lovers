@@ -1,5 +1,91 @@
+/* BASE REUSABLE STYLESHEET */
+body, html {
+  min-height: 100%;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+nav {
+  background-color: #ff3399;
+  background-image: linear-gradient(to bottom, #0000cc 0%, #ff3399 100%);
+  color: #ffffff;
+  transition: all 0.5s ease-out;
+  background-size: 1px 100px;
+  background-position: 0 -10px;
+  padding: 2vh;
+  min-width: 100vw;
+}
+
+h1, nav {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #225ca3;
+  transition: color 0.1s;
+}
+a:hover {
+  font-weight: bold;
+  color: #ea0028;
+}
+
+label {
+  font-weight: bold;
+}
+
+button {
+  border: 0;
+  padding: 1%;
+  font-weight: bold;
+  curser: pointer;
+  border-radius: 5px;
+}
+
+.btn-login, .btn-save, .btn-add, .btn-homepage {
+  background-color: #ff3399;
+  background-image: linear-gradient(45deg, #ff3399 0%, #2bd2ff 52%, #2bff88 90%);
+  transition: all 0.5s ease-out;
+  background-size: 1px 100px;
+  background-position: 0 -10px;
+}
+.btn-login:hover, .btn-save:hover, .btn-add:hover, .btn-homepage:hover {
+  background-position: 1px -50px;
+}
+
+.btn-delete, .btn-logout {
+  background-color: #ea0028;
+  background-image: linear-gradient(180deg, #ff9a8b 0%, #ea0028 100%);
+  transition: all 0.5s ease-out;
+  background-size: 1px 100px;
+  background-position: 0 -10px;
+}
+.btn-delete:hover, .btn-logout:hover {
+  background-position: 1px -50px;
+  color: #ffffff;
+}
+
+footer {
+  font-weight: bold;
+  height: 2vh;
+  background-color: #ea0028;
+  background-image: linear-gradient(180deg, #ff9a8b 0%, #ea0028 100%);
+  background-size: 1px 150px;
+  bottom: 0;
+  width: 100%;
+}
+
 html {
   background: url(/assets/images/homepage.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /*# sourceMappingURL=homepage.css.map */
