@@ -110,6 +110,11 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
   min-width: 100%;
+  opacity: 0.8;
+}
+
+label {
+  color: #0000cc;
 }
 
 /*# sourceMappingURL=login.css.map */
