@@ -10,12 +10,6 @@ function addItem(){
     li.appendChild(document.createTextNode(calendar.value));
     ul.appendChild(li);
 
-    if(!$('#datepicker').val()){
-        $('#button-1').hide();
-    }
-    else {
-        $('#button-1').show();
-    }
 }
 
 function removeItem(){
@@ -62,3 +56,15 @@ function removeItem2(){
     var item = document.getElementById(candidate.value);
     ul.removeChild(item);
 }
+
+function hideBtn() {
+    if($('#candidate').val() == "" && $('#datepicker').val() == "" ){
+        $('#button-1').hide();
+        $('#button-2').hide();
+    } else {
+        $('#button-1').show();
+        $('#button-2').show();
+    }
+}
+
+hideBtn();

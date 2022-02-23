@@ -7,9 +7,11 @@
         <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     </head>
     <body>
-<section class="container">
-<div class="level-item">
-<div class="columns is-multiline is-centered cards-container" id="sectioncontainer">
+    <section class="container">
+        <div class="level-item">
+        <div class="columns is-multiline is-centered cards-container" id="sectioncontainer">
+    
+    {{!-- Card 1 --}}
     <div class="column is-wide">
         <article class="message is-black">
             <div class="message-header">
@@ -17,19 +19,22 @@
             </div>
             <div class="message-body">
                 <input placeholder="City" type="text" id="candidate"/>
-                <br>
-                 <input placeholder="Date" type="text" id="datepicker">
-            
-              <div>
-                <button id="button-1" onclick="addItem()">Add</button>
-                <button id="button-1" onclick="removeItem()">Remove</button>
-              </div>
-            <div>
-                <ul id="dynamic-list"></ul>
-            </div>
+                    <br>
+                <input placeholder="Date" type="text" id="datepicker">
+                    <br>
+                    <br>
+                <div id="btnSection">
+                    <button id="button-1" onclick="addItem()">Add</button>
+                    <button id="button-2" onclick="removeItem()">Remove</button>
+                </div>
+                <div>
+                    <ul id="dynamic-list"></ul>
+                </div>
             </div>
         </article>
     </div>
+    
+    {{!-- Card 2 --}}
     <div class="column is-wide">
         <article class="message is-primary">
             <div class="message-header">
@@ -39,8 +44,8 @@
                 <input placeholder="City" type="text" id="candidate1"/>
                 <br>
                 <input placeholder="Date" type="text" id="datepicker1">
-                
-            
+                <br>
+                <br>
                 <div>
                   <button onclick="addItem1()">Add</button>
                   <button onclick="removeItem1()">Remove</button>
@@ -51,7 +56,7 @@
         </article>
             </div>
         
-    
+    {{!-- Card 3 --}}
     <div class="column is-wide">
         <article class="message is-link">
             <div class="message-header">
@@ -61,7 +66,8 @@
                 <input placeholder="City" type="text" id="candidate2"/>
                 <br>
                 <input placeholder="Date" type="text" id="datepicker2">
-            
+                <br>
+                <br>
                 <button onclick="addItem2()">Add</button>
                 <button onclick="removeItem2()">Remove</button>
             <div>
