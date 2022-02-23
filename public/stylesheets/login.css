@@ -94,6 +94,7 @@ footer {
 
 .copyright {
   position: absolute;
+  font-size: 2vh;
   bottom: 2vw;
   right: 2vw;
 }
