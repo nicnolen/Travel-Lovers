@@ -44,6 +44,7 @@ a:hover, button:hover {
 
 label {
   font-weight: bolder;
+  font-size: 1.5vh;
   color: #000000;
 }
 
@@ -97,8 +98,8 @@ footer {
 .copyright {
   position: absolute;
   font-size: 2vh;
-  bottom: 2vw;
-  right: 2vw;
+  bottom: 2vh;
+  right: 2vh;
 }
 
 /*# sourceMappingURL=style.css.map */
