@@ -20,6 +20,7 @@ Travel Lovers is an application that allows a travel enthusiast to create an acc
 * MySQL2
 * Sequelize
 * Jest
+* Insomnia
 * Handlebars.js
 * Sass
 * Bulma
@@ -61,16 +62,42 @@ OFFERING a travel enthusiast an organized travel log
 ### Jest Test
 * Run `npm test` to run Jest for tests on constructors
 ### Insomnia Routes
-![delete-places](https://user-images.githubusercontent.com/91860506/155267361-3b8631cc-fcbd-49b0-b689-45f6f9931cd4.PNG)
-![delete-user](https://user-images.githubusercontent.com/91860506/155267371-b4e3d96b-a48a-48ca-9d64-cdf13aab3f00.png)
-![get-all-places](https://user-images.githubusercontent.com/91860506/155267380-89507b61-a957-4bbf-9d26-a01b63cc25de.PNG)
-![get-all-users](https://user-images.githubusercontent.com/91860506/155267388-758fb92a-10fa-472d-9b2d-db3bba1e585a.png)
-![get-places-id](https://user-images.githubusercontent.com/91860506/155267400-19b6c594-2947-44d8-8253-2f172f3280cf.PNG)
-![get-user-id](https://user-images.githubusercontent.com/91860506/155267408-b0306e94-1123-45e1-8a0f-c0673f31f69f.png)
-![post-places](https://user-images.githubusercontent.com/91860506/155267417-29cf5a3e-2b25-4db3-bd69-7ec51e6c29d1.PNG)
-![post-user](https://user-images.githubusercontent.com/91860506/155267423-17beae31-ad4a-487a-ab03-cd7bed5e240d.png)
-![put-user](https://user-images.githubusercontent.com/91860506/155267432-d3a9a5ce-c281-49cb-bc17-e45b63b07d82.png)
-![update-places](https://user-images.githubusercontent.com/91860506/155267441-ded4a283-a411-4be6-8e67-b6e893018f64.PNG)
+Insomnia was used to seed and test the routes for this app. There is no command for running these tests. 
+1. To test the application, download insomnia. For more information on Insomnia, follow this link: https://docs.insomnia.rest/.
+
+2. Run `npm run seeds` in the command-line to get preseeded data. 
+
+3. Run `npm start` to start the server
+
+4. Go to Insomnia and test for the route you want to test. Make sure to change the route from GET to POST, PUT, Or DELETE depending on what you want to test for. 
+
+5. The routes will be as follows (change users to posts or comments if you would like to test those routes and change :id to the id of the route you are testing for):
+
+- GET (all users): http://localhost:3001/api/users 
+- GET (one user): http://localhost:3001/api/users/:id
+- POST: http://localhost:3001/api/users
+- PUT: http://localhost:3001/api/users/1
+- DELETE: http://localhost:3001/api/users/2
+
+#### User Route Screenshots
+
+- GET (all users): ![get-all-users](https://user-images.githubusercontent.com/91860506/155267388-758fb92a-10fa-472d-9b2d-db3bba1e585a.png)
+- GET (one user): ![get-user-id](https://user-images.githubusercontent.com/91860506/155267408-b0306e94-1123-45e1-8a0f-c0673f31f69f.png)
+- POST: ![post-user](https://user-images.githubusercontent.com/91860506/155267423-17beae31-ad4a-487a-ab03-cd7bed5e240d.png)
+- PUT: ![put-user](https://user-images.githubusercontent.com/91860506/155267432-d3a9a5ce-c281-49cb-bc17-e45b63b07d82.png)
+- DELETE: ![delete-user](https://user-images.githubusercontent.com/91860506/155267371-b4e3d96b-a48a-48ca-9d64-cdf13aab3f00.png)
+
+#### Place Routes Screenshots
+
+- GET (all places): ![get-all-places](https://user-images.githubusercontent.com/91860506/155267380-89507b61-a957-4bbf-9d26-a01b63cc25de.PNG)
+
+- GET (one place): ![get-places-id](https://user-images.githubusercontent.com/91860506/155267400-19b6c594-2947-44d8-8253-2f172f3280cf.PNG) 
+
+- POST: ![post-places](https://user-images.githubusercontent.com/91860506/155267417-29cf5a3e-2b25-4db3-bd69-7ec51e6c29d1.PNG)
+
+- PUT: ![put-user](https://user-images.githubusercontent.com/91860506/155267432-d3a9a5ce-c281-49cb-bc17-e45b63b07d82.png)
+
+- Delete: ![delete-places](https://user-images.githubusercontent.com/91860506/155267361-3b8631cc-fcbd-49b0-b689-45f6f9931cd4.PNG)
 
 ## Questions
 If you have any questions about this projects, please contact me directly at nicnolen@gmail.com. You can view more of my projects at https://github.com/nicnolen.

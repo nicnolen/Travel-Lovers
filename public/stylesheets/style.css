@@ -91,7 +91,6 @@ footer {
   height: 2vh;
   background-color: #ea0028;
   background-image: linear-gradient(180deg, #ff9a8b 0%, #ea0028 100%);
-<<<<<<< HEAD
   background-size: 1px 350px;
   position: relative;
 }
@@ -101,11 +100,6 @@ footer {
   font-size: 2vh;
   bottom: 2vh;
   right: 2vh;
-=======
-  background-size: 1px 150px;
-  bottom: 0;
-  width: 100%;
->>>>>>> 354cab6c4830e7831a79a52adbe25883eb7a0f86
 }
 
 /*# sourceMappingURL=style.css.map */
