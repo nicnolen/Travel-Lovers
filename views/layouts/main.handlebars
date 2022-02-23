@@ -15,10 +15,15 @@
   <body>
     <header class='is-flex is-flex-direction-row'>
       <nav class='is-justify-content-space-evenly'>
-        <h1>
-          Travel Lovers
-        </h1>
-        <span class="is-align-items-flex-end">
+        <a class="navbar-item" href="assets/images/travel-lovers-logo.png"></a>
+          <img
+            alt='Travel Lovers logo'
+            src='assets/images/travel-lovers-logo.png'
+            width='200'
+            height='30'
+          />
+        </a>
+        <span class='is-align-items-center'>
           <button class='btn-nav'><a href='/'>Homepage</a></button>
           {{#if loggedIn}}
             <button class='btn-nav'><a
