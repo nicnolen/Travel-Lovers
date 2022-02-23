@@ -11,7 +11,7 @@ $light-orange: #ff9a8b
 $purple: #0000cc
 $pink: #ff3399
 
-body, html
+html, body
   min-height: 100%
   
 .wrapper 
@@ -37,7 +37,7 @@ nav
 h1, nav
   display: inline-block
 
-a, button 
+a, button
   text-decoration: none
   font-weight: bold
   color: $dark-blue
@@ -64,6 +64,7 @@ button, input
   background-position: 0 -10px
   &:hover
     background-position: 1px -50px
+    color: $red
 
 .btn-delete, .btn-logout
   background-color: $red
@@ -74,6 +75,10 @@ button, input
   &:hover
     background-position: 1px -50px
     color: $white
+
+.btn-nav, .btn-logout
+  margin-right: 1.5vw
+  padding: 1vw
 
 footer
   font-weight: bold

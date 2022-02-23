@@ -1,5 +1,5 @@
 /* BASE REUSABLE STYLESHEET */
-body, html {
+html, body {
   min-height: 100%;
 }
 
@@ -62,6 +62,7 @@ button, input {
 }
 .btn-nav:hover, .btn-login:hover, .btn-save:hover, .btn-add:hover {
   background-position: 1px -50px;
+  color: #ea0028;
 }
 
 .btn-delete, .btn-logout {
@@ -76,6 +77,11 @@ button, input {
   color: #ffffff;
 }
 
+.btn-nav, .btn-logout {
+  margin-right: 1.5vw;
+  padding: 1vw;
+}
+
 footer {
   font-weight: bold;
   height: 2vh;
@@ -85,7 +91,7 @@ footer {
 }
 
 /* LOGIN STYLES */
-html {
+body {
   margin: 0 auto;
   background: url(/assets/images/airplane-taking-off.jpg);
   background-postition: center;
