@@ -31,7 +31,7 @@ const withAuth = require("../utils/auth");
         .then((dbPlaceData) => {
             const places = dbPlaceData.map((place) => place.get({ plain: true }));
   
-            res.render("homepage", {
+            res.render("dashboard", {
                 places });
         })
         .catch((err) => {

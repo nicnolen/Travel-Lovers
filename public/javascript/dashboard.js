@@ -45,4 +45,3 @@ function removeItem2(){
     var item = document.getElementById(candidate.value);
     ul.removeChild(item);
 }
-
