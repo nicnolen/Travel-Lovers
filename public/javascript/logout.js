@@ -14,7 +14,7 @@ async function logout() {
     errorEl.innerHTML = '';
     document.location.replace('/');
   } else {
-    errorEl.innerHTML = response.statusText;
+    errorEl.innerHTML = `${response.statusText}: Logout failed`;
   }
 }
 
