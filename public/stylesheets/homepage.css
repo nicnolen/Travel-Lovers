@@ -1,10 +1,6 @@
 /* BASE REUSABLE STYLESHEET */
-html, body {
+body, html {
   min-height: 100%;
-}
-
-#error-message {
-  color: white;
 }
 
 .wrapper {
@@ -14,41 +10,37 @@ html, body {
   margin: 0 auto;
 }
 
-h1 {
-  font-size: 4vh;
-  padding-right: 2vw;
-  display: inline-block;
-}
-
 nav {
   background-color: #ff3399;
   background-image: linear-gradient(to bottom, #0000cc 0%, #ff3399 100%);
   color: #ffffff;
   transition: all 0.5s ease-out;
-  background-size: 1px 400px;
+  background-size: 1px 100px;
   background-position: 0 -10px;
   padding: 2vh;
   min-width: 100vw;
+}
+
+h1, nav {
   display: inline-block;
 }
 
-a, button {
+a {
   text-decoration: none;
   font-weight: bold;
   color: #225ca3;
   transition: color 0.1s;
 }
-a:hover, button:hover {
+a:hover {
   font-weight: bold;
+  color: #ea0028;
 }
 
 label {
-  font-weight: bolder;
-  font-size: 1.5vh;
-  color: #000000;
+  font-weight: bold;
 }
 
-button, input {
+button {
   border: 0;
   padding: 1%;
   font-weight: bold;
@@ -56,23 +48,22 @@ button, input {
   border-radius: 5px;
 }
 
-.btn-nav, .btn-login, .btn-save, .btn-add {
+.btn-login, .btn-save, .btn-add, .btn-homepage {
   background-color: #ff3399;
   background-image: linear-gradient(45deg, #ff3399 0%, #2bd2ff 52%, #2bff88 90%);
   transition: all 0.5s ease-out;
-  background-size: 1px 130px;
+  background-size: 1px 100px;
   background-position: 0 -10px;
 }
-.btn-nav:hover, .btn-login:hover, .btn-save:hover, .btn-add:hover {
+.btn-login:hover, .btn-save:hover, .btn-add:hover, .btn-homepage:hover {
   background-position: 1px -50px;
-  color: #ea0028;
 }
 
 .btn-delete, .btn-logout {
   background-color: #ea0028;
   background-image: linear-gradient(180deg, #ff9a8b 0%, #ea0028 100%);
   transition: all 0.5s ease-out;
-  background-size: 1px 130px;
+  background-size: 1px 100px;
   background-position: 0 -10px;
 }
 .btn-delete:hover, .btn-logout:hover {
@@ -80,32 +71,21 @@ button, input {
   color: #ffffff;
 }
 
-.btn-nav, .btn-logout {
-  margin-right: 1.5vw;
-  padding: 1vw;
-}
-
 footer {
-  font-weight: bolder;
-  font-size: 3vh;
+  font-weight: bold;
   height: 2vh;
   background-color: #ea0028;
   background-image: linear-gradient(180deg, #ff9a8b 0%, #ea0028 100%);
-<<<<<<< HEAD
-  background-size: 1px 350px;
-  position: relative;
-}
-
-.copyright {
-  position: absolute;
-  font-size: 2vh;
-  bottom: 2vh;
-  right: 2vh;
-=======
   background-size: 1px 150px;
   bottom: 0;
   width: 100%;
->>>>>>> 354cab6c4830e7831a79a52adbe25883eb7a0f86
 }
 
-/*# sourceMappingURL=style.css.map */
+html {
+  background: url(/assets/images/homepage.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*# sourceMappingURL=homepage.css.map */
