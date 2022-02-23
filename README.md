@@ -15,6 +15,7 @@ Travel Lovers is an application that allows a travel enthusiast to create an acc
 [MIT](https://choosealicense.com/licenses/mit/)
 
 ## Toolbox
+* Heroku
 * Express.js
 * MySQL2
 * Sequelize
@@ -44,14 +45,13 @@ THEN I am taken to the homepage and presented with a welcome image </br>
 WHEN I click on the dashboard option in the navigation </br>
 THEN I am taken to the dashboard and presented with past, upcoming, and bucket-list trip categories via kanban board </br>
 FOR EACH kanboard board category </br>
-I CAN add, edit, and delete past, upcoming, and bucket-list trips </br>
+I CAN add, edit, and delete; past, upcoming, and bucket-list trips </br>
 OFFERING a travel enthusiast an organized travel log
 
 ## Tests
 ### Contributing to the application
 * Clone the repository from GitHub
 * Download Node.js and MySQL
-Once installed, the user should:
 * Run `npm install` in the bash terminal to download the application dependencies
 * Log into MySQL and run `source db/schema.sql` - This will create the travel_lovers_db (database)
 * Thereafter you can run `quit` to exit MySQL
