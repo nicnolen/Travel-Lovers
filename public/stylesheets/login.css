@@ -43,6 +43,7 @@ a:hover, button:hover {
 
 label {
   font-weight: bolder;
+  color: #000000;
 }
 
 button, input {
