@@ -10,6 +10,11 @@
       rel='stylesheet'
       href='https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css'
     />
+    <!--Link to Font Awesome -->
+    <link
+      href='//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css'
+      rel='stylesheet'
+    />
   </head>
 
   <body>
@@ -30,15 +35,21 @@
         <div class='navbar-end'>
           <div class='navbar-item'>
             <div class='buttons'>
-              <a href='/'><button class='button btn-nav'>Homepage</button></a>
+              <a href='/'><button class='button btn-nav'><i
+                    class='icon-home icon-large pr-2'
+                  ></i>Homepage</button></a>
               {{#if loggedIn}}
-                <a href='/bucket-list'><button
-                    class='btn-nav'
-                  >Dashboard</button></a>
-                <button id='logout' class='button btn-logout'>Logout</button>
+                <a href='/dashboard'><button class='button btn-nav'><i
+                      class='icon-plane icon-large pr-2'
+                    ></i>Dashboard</button></a>
+                <button id='logout' class='button btn-logout'><i
+                    class='icon-lock icon-large pr-2'
+                  ></i>Logout</button>
                 <div id='error-message'></div>
               {{else}}
-                <a href='/login'><button class='button btn-nav'>Login</button></a>
+                <a href='/login'><button class='button btn-nav'><i
+                      class='icon-unlock icon-large pr-2'
+                    ></i>Login</button></a>
                 <div id='error-message'></div>
               {{/if}}
             </div>
@@ -47,7 +58,7 @@
 
       </nav>
     </header>
-    <main class='wrapper is-flex is-flex-direction-column'>
+    <main class='wrapper'>
       {{{body}}}
     </main>
     <footer class='footer'>

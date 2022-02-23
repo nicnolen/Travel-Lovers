@@ -92,12 +92,13 @@ footer {
 }
 
 /* LOGIN STYLES */
-body {
+main {
   margin: 0 auto;
   background: url(/assets/images/airplane-taking-off.jpg);
   background-postition: center;
   background-repeat: no-repeat;
   background-size: cover;
+  min-width: 100%;
 }
 
 /*# sourceMappingURL=login.css.map */
