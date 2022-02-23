@@ -1,9 +1,5 @@
 html {
-  margin: 0 auto;
-  background: url(/assets/images/homepagebg.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: url(/assets/images/homepage.jpg);
 }
 
 /*# sourceMappingURL=homepage.css.map */
