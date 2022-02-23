@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <title>bulma cards</title>
         <link rel='stylesheet' href='https://unpkg.com/bulma@0.9.0/css/bulma.min.css'>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     </head>
     <body>
 <section class="container">
@@ -15,15 +16,17 @@
                 <p>Bucketlist</p>
             </div>
             <div class="message-body">
-                <input type="text" id="candidate"/>
-                <button onclick="addItem()">Add</button>
-                <button onclick="removeItem()">Remove</button>
-            </div>
+                <input placeholder="City" type="text" id="candidate"/>
+                <br>
+                 <input placeholder="Date" type="text" id="datepicker">
+            
               <div>
-                <p>Date: <input type="text" id="datepicker"></p>
+                <button id="button-1" onclick="addItem()">Add</button>
+                <button id="button-1" onclick="removeItem()">Remove</button>
               </div>
             <div>
                 <ul id="dynamic-list"></ul>
+            </div>
             </div>
         </article>
     </div>
@@ -33,14 +36,16 @@
                 <p>Visiting</p>
             </div>
             <div class="message-body">
-                <input type="text" id="candidate1"/>
-                <button onclick="addItem1()">Add</button>
-                <button onclick="removeItem1()">Remove</button>
-            </div>
+                <input placeholder="City" type="text" id="candidate1"/>
+                <br>
+                <input placeholder="Date" type="text" id="datepicker1">
+                
+            
                 <div>
-                  <p>Date: <input type="text" id="datepicker1"></p>
+                  <button onclick="addItem1()">Add</button>
+                  <button onclick="removeItem1()">Remove</button>
                 </div>
-            <div>
+            
                 <ul id="dynamic-list1"></ul>
             </div>
         </article>
@@ -52,15 +57,13 @@
             <div class="message-header">
                 <p>Visited</p>
             </div>
-
             <div class="message-body">
-                <input type="text" id="candidate2"/>
+                <input placeholder="City" type="text" id="candidate2"/>
+                <br>
+                <input placeholder="Date" type="text" id="datepicker2">
+            
                 <button onclick="addItem2()">Add</button>
                 <button onclick="removeItem2()">Remove</button>
-            </div>
-            <div>
-                <p>Date: <input type="text" id="datepicker2"></p>
-            </div>
             <div>
                 <ul id="dynamic-list2"></ul>
             </div>
@@ -69,7 +72,7 @@
     </div>
 </section>
 
-<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
 <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
 <script src='./javascript/dashboard.js'></script>
 <script src='./javascript/datepicker.js'></script>

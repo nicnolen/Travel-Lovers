@@ -1,3 +1,4 @@
+
 function addItem(){
     var ul = document.getElementById("dynamic-list");
     var candidate = document.getElementById("candidate");
@@ -8,6 +9,13 @@ function addItem(){
     li.appendChild(document.createTextNode(candidate.value));
     li.appendChild(document.createTextNode(calendar.value));
     ul.appendChild(li);
+
+    if(!$('#datepicker').val()){
+        $('#button-1').hide();
+    }
+    else {
+        $('#button-1').show();
+    }
 }
 
 function removeItem(){
