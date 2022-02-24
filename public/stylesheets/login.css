@@ -55,7 +55,7 @@ label {
 button, input {
   border: 0;
   font-weight: bold;
-  cursor: pointer;
+  curser: pointer;
   border-radius: 5px;
 }
 
@@ -110,11 +110,21 @@ footer {
   right: 2vh;
 }
 
+#btnSection {
+  margin-bottom: 25px;
+  margin-left: 80px;
+}
+
+#btnSection {
+  margin-bottom: 25px;
+  margin-left: 80px;
+}
+
 /* LOGIN STYLES */
 main {
   margin: 0 auto;
   background: url(/assets/images/airplane-taking-off.jpg);
-  background-position: center;
+  background-postition: center;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;

@@ -55,7 +55,7 @@ label {
 button, input {
   border: 0;
   font-weight: bold;
-  cursor: pointer;
+  curser: pointer;
   border-radius: 5px;
 }
 
@@ -103,6 +103,7 @@ footer {
   bottom: 0;
 }
 
+<<<<<<< HEAD
 .copyright {
   position: absolute;
   font-size: 2vh;
@@ -110,4 +111,16 @@ footer {
   right: 2vh;
 }
 
+=======
+#btnSection {
+  margin-bottom: 25px;
+  margin-left: 80px;
+}
+
+#btnSection {
+  margin-bottom: 25px;
+  margin-left: 80px;
+}
+
+>>>>>>> 9eb2b3550a8f19915d701b2ecaa456d65982fe93
 /*# sourceMappingURL=style.css.map */
