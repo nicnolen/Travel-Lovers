@@ -122,5 +122,27 @@ footer {
 }
 
 /* DASHBOARD STYLES */
+main {
+  background-image: url(/assets/images/homepage.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-width: 100%;
+  width: 100%;
+  min-height: 100%;
+  margin: 0 auto;
+}
+.columns {
+    /* flex: 3 ; */
+    /* background-color: #fff; */
+    padding: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    height: 1000px;
+    
+}
+
 
 /*# sourceMappingURL=dashboard.css.map */
