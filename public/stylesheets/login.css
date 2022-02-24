@@ -100,6 +100,7 @@ footer {
   background-image: linear-gradient(180deg, #ff9a8b 0%, #ea0028 100%);
   background-size: 1px 350px;
   position: relative;
+  bottom: 0;
 }
 
 .copyright {
@@ -116,12 +117,18 @@ main {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-width: 100%;
-  opacity: 0.8;
+  width: 100%;
+  min-height: 100%;
+  margin: 0 auto;
 }
 
 label {
   color: #0000cc;
+}
+
+form {
+  border: 1px solid black;
+  background-color: white;
 }
 
 /*# sourceMappingURL=login.css.map */

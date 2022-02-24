@@ -15,7 +15,7 @@ router.get("/traveling", (req, res) => {
         .then(posts => {
         
             const traveling_posts = posts.map((travel) => travel.get({ plain: true }));
-            console.log("look: " + JSON.stringify(traveling_posts));
+            console.info("look: " + JSON.stringify(traveling_posts));
             res.render("traveling", {
                 layout: "main",
                 traveling_posts
@@ -23,7 +23,7 @@ router.get("/traveling", (req, res) => {
 
         })
         .catch(err => {
-            console.log(err);
+            console.error(err);
             // res.redirect("login");
         });
   });
@@ -34,7 +34,7 @@ router.get("/", (req, res) => {
         }
     })
         .then(traveling_post => {
-            console.log("look "+JSON.stringify(traveling_post));
+            console.info("look "+JSON.stringify(traveling_post));
             // const posts = dbPostData.map((post) => post.get({ plain: true }));
   
             res.render("dashboard", {
@@ -43,8 +43,7 @@ router.get("/", (req, res) => {
             });
         })
         .catch(err => {
-            console.log(err);
-            // res.redirect("login");
+            console.error(err);
         });
   });
   
@@ -67,7 +66,7 @@ router.get("/", (req, res) => {
             } else {
                 res.status(404).end();
             }
-            console.log(dbPostData);
+            console.info(dbPostData);
         })
         .catch(err => {
             res.status(500).json(err);
@@ -84,7 +83,7 @@ router.get("/", (req, res) => {
         .then(posts => {
         
             const lifestyle_posts = posts.map((lifestyle) => lifestyle.get({ plain: true }));
-            console.log("look: " + JSON.stringify(lifestyle_posts));
+            console.info("look: " + JSON.stringify(lifestyle_posts));
             res.render("lifestyle", {
                 layout: "main",
                 lifestyle_posts
@@ -92,7 +91,7 @@ router.get("/", (req, res) => {
 
         })
         .catch(err => {
-            console.log(err);
+            console.error(err);
             // res.redirect("login");
         });
   });
@@ -112,7 +111,7 @@ router.get("/", (req, res) => {
             });
         })
         .catch(err => {
-            console.log(err);
+            console.error(err);
             // res.redirect("login");
         });
   });
@@ -136,7 +135,7 @@ router.get("/", (req, res) => {
             } else {
                 res.status(404).end();
             }
-            console.log(dbPostData);
+            console.info(dbPostData);
         })
         .catch(err => {
             res.status(500).json(err);
@@ -153,7 +152,7 @@ router.get("/bucketlist", (req, res) => {
         .then(posts => {
         
             const bucketlist_posts = posts.map((bucketlist) => bucketlist.get({ plain: true }));
-            console.log("look: " + JSON.stringify(bucketlist_posts));
+            console.info("look: " + JSON.stringify(bucketlist_posts));
             res.render("bucketlist", {
                 layout: "main",
                 bucketlist_posts
@@ -161,7 +160,7 @@ router.get("/bucketlist", (req, res) => {
 
         })
         .catch(err => {
-            console.log(err);
+            console.error(err);
             // res.redirect("login");
         });
   });
@@ -185,7 +184,7 @@ router.get("/bucketlist", (req, res) => {
             } else {
                 res.status(404).end();
             }
-            console.log(dbPostData);
+            console.info(dbPostData);
         })
         .catch(err => {
             res.status(500).json(err);

@@ -1,75 +1,85 @@
-<div class='container'>
-  <div class='board is-flex is-justify-content-center'>
-    <a href='/dashboard/bucketlist'>
-      <button class='btn-nav' id='bucketlist'><i
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>bulma cards</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    </head>
+    <body>
+    <section class="container">
+        <div class="level-item">
+        <div class="columns is-multiline is-centered cards-container" id="sectioncontainer">
+    
+    {{!-- Card 1 --}}
+    <div class="column is-wide">
+        <article class="message is-black">
+            <div class="message-header">
+                <p>Bucketlist</p><i
           class='icon-bitbucket pr-2'
         ></i>
-        Bucketlist
-      </button>
-    </a>
-    <a href='/dashboard/traveling'>
-      <button class='btn-nav' id='visiting'><i
-          class='icon-plane icon-large pr-2'
-        ></i>
-        Traveling
-      </button>
-    </a>
-    <a href='/dashboard/food'><button class='block btn-nav' id='visited'><i
-          class='icon-food pr-2'
-        ></i>
-         Food
-      </button>
-    </a>
-    <a href='/dashboard/lifestyle'><button
-        class='block btn-nav'
-        id='dashboard'
-      ><i class='icon-shopping-cart'></i>
-         Lifestyle
-      </button></a>
-  </div>
-
-  {{! <div>
-    <a href="/dashboard/new">➕ New Post</a>
-  </div> }}
-  {{!-- <div>
-    {{#each places}}
+            </div>
+            <div class="message-body">
+                <input placeholder="City" type="text" id="candidate"/>
+                    <br>
+                <i class="icon-calendar"></i><input placeholder="Date" type="text" id="datepicker">
+                    
+                <div id="btnSection">
+                    <button id="button-1" onclick="addItem()"><i class="icon-plus-sign-alt"></i>Add</button>
+                    <button id="button-2" onclick="removeItem()">Remove</button>
+                </div>
+                <div>
+                    <ul id="dynamic-list"></ul>
+                </div>
+            </div>
+        </article>
+    </div>
     
-      <div>
-        City
-        {{city}}
-      </div>
-    {{/each}}
-  </div> --}}
-  {{!-- <div class="posts list-group">
-    {{#each posts}}
-    <a class="list-item flex-row justify-space-between" href="/dashboard/edit/{{id}}">
-        <span>{{title}}</span>
-        {{!-- <span>{{format_date createdAt}}</span> --}}
-  {{! </a> }}
-  {{!-- {{/each}}
-</div> --}}
+    {{!-- Card 2 --}}
+    <div class="column is-wide">
+        <article class="message is-primary">
+            <div class="message-header">
+                <p>Visiting</p><i class="icon-ticket"></i>
+            </div>
+            <div class="message-body">
+                <input placeholder="City" type="text" id="candidate1"/>
+                <br>
+                <i class="icon-calendar"></i><input placeholder="Date" type="text" id="datepicker1">
+                <div id="btnSection">
+                  <button onclick="addItem1()"><i class="icon-plus-sign-alt"></i>Add</button>
+                  <button onclick="removeItem1()">Remove</button>
+                </div>
+            
+                <ul id="dynamic-list1"></ul>
+            </div>
+        </article>
+            </div>
+        
+    {{!-- Card 3 --}}
+    <div class="column is-wide">
+        <article class="message is-link">
+            <div class="message-header">
+                <p>Visited</p>
+            </div>
+            <div class="message-body">
+                <input placeholder="City" type="text" id="candidate2"/>
+                <br>
+                <i class="icon-calendar"></i><input placeholder="Date" type="text" id="datepicker2">
+                <div id="btnSection"> 
+                    <button onclick="addItem2()"><i class="icon-plus-sign-alt"></i>Add</button>
+                    <button onclick="removeItem2()">Remove</button>
+                </div>
+            <div>
+                <ul id="dynamic-list2"></ul>
+            </div>
+        </article>
+    </div>
+    </div>
+</section>
 
-  <div class='posts list-group'>
-    <span>{{lifestyle_post.title}}</span>
-    <span>{{lifestyle_post.author}}</span>
-    <a
-      class='list-item flex-row justify-space-between'
-      href='/dashboard/lifestyle/edit/{{lifestyle_post.id}}'
-    >
 
-      <div>{{lifestyle_post.body}}</div>
-    </a>
-  </div>
+<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+<script src='./javascript/dashboard.js'></script>
+<script src='./javascript/datepicker.js'></script>
 
-  <div class='posts list-group'>
-    <span>{{traveling_post.title}}</span>
-    <span>{{traveling_post.author}}</span>
-    <a
-      class='list-item flex-row justify-space-between'
-      href='/dashboard/lifestyle/edit/{{traveling_post.id}}'
-    >
-
-      <div>{{traveling_post.body}}</div>
-    </a>
-  </div>
-</div>
+</body>
+</html>
