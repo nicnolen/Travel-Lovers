@@ -1,1 +1,55 @@
-</div>hello Dashboard</div>
+<div class="container">
+    <div class="board">
+        <div class="block" id="bucketlist">
+          <a href="/dashboard/bucketlist">BUCKETLIST</a>
+        </div>
+        <div class="block" id="visiting">
+          <a href="/dashboard/traveling">TRAVELING</a>
+        </div>
+        <div class="block" id="visited">
+          <a href="/dashboard/food">FOOD</a>
+        </div>
+        <div class="block" id="dashboard">
+            <a href="/dashboard/lifestyle">LIFESTYPE</a>
+        </div>
+
+  {{!-- <div>
+    <a href="/dashboard/new">➕ New Post</a>
+  </div> --}}
+  {{!-- <div>
+    {{#each places}}
+    
+      <div>
+        City
+        {{city}}
+      </div>
+    {{/each}}
+  </div> --}}
+  {{!-- <div class="posts list-group">
+    {{#each posts}}
+    <a class="list-item flex-row justify-space-between" href="/dashboard/edit/{{id}}">
+        <span>{{title}}</span>
+        {{!-- <span>{{format_date createdAt}}</span> --}}
+    {{!-- </a> --}}
+    {{!-- {{/each}}
+</div> --}} 
+
+
+<div class="posts list-group">
+    <span>{{lifestyle_post.title}}</span>
+    <span>{{lifestyle_post.author}}</span>
+  <a class="list-item flex-row justify-space-between" href="/dashboard/lifestyle/edit/{{lifestyle_post.id}}">
+    
+    <div>{{lifestyle_post.body}}</div>
+  </a>
+</div>
+
+
+<div class="posts list-group">
+    <span>{{traveling_post.title}}</span>
+    <span>{{traveling_post.author}}</span>
+  <a class="list-item flex-row justify-space-between" href="/dashboard/lifestyle/edit/{{traveling_post.id}}">
+    
+    <div>{{traveling_post.body}}</div>
+  </a>
+</div>
