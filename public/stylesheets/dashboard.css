@@ -140,6 +140,7 @@ main {
 .ui-datepicker-title {
   color: #2bd2ff;
   font-weight: bold;
+  text-align: center;
 }
 
 .column {
