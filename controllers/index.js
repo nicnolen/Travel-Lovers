@@ -1,8 +1,8 @@
 /* USED TO COLLECT THE PACKAGED API ROUTES */
 // Import files and dependencies
 const router = require('express').Router();
-const apiRoutes = require('./api')
-const homeRoutes = require('./home-routes');
+const apiRoutes = require('./api/')
+const homeRoutes = require('./home-routes.js');
 const dashboardRoutes = require('./dashboard-routes.js');
 
 

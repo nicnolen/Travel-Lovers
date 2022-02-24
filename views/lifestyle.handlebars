@@ -1,0 +1,24 @@
+<div>
+  <a href="/dashboard/bucketlist/new">➕ New Post</a>
+</div>
+<div class="posts list-group">
+    {{#each lifestyle_posts}}
+  <a class="list-item flex-row justify-space-between" href="/dashboard//edit/{{posts.id}}">
+    <span>{{title}}</span>
+    <span>{{author}}</span>
+    <div>{{body}}</div>
+  </a>
+  {{/each}}
+</div>
+
+{{!-- <div>
+  <a href="/dashboard/lifestyle/new">➕ New Post</a>
+</div>
+<div class="posts list-group">
+    <span>{{lifestyle_post.title}}</span>
+    <span>{{lifestyle_post.author}}</span>
+  <a class="list-item flex-row justify-space-between" href="/dashboard/lifestyle/edit/{{lifestyle_post.id}}">
+    
+    <div>{{lifestyle_post.body}}</div>
+  </a>
+</div> --}}

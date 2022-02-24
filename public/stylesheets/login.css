@@ -48,14 +48,14 @@ button {
   border-radius: 5px;
 }
 
-.btn-login, .btn-save, .btn-add, .btn-homepage {
+.btn-login, .btn-save, .btn-add, .btn-homepage, .btn-dashboard {
   background-color: #ff3399;
   background-image: linear-gradient(45deg, #ff3399 0%, #2bd2ff 52%, #2bff88 90%);
   transition: all 0.5s ease-out;
   background-size: 1px 100px;
   background-position: 0 -10px;
 }
-.btn-login:hover, .btn-save:hover, .btn-add:hover, .btn-homepage:hover {
+.btn-login:hover, .btn-save:hover, .btn-add:hover, .btn-homepage:hover, .btn-dashboard:hover {
   background-position: 1px -50px;
 }
 
