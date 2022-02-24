@@ -57,6 +57,8 @@ function removeItem2(){
     ul.removeChild(item);
 }
 
+
+
 function hideBtn() {
     if($('#candidate').val() == "" && $('#datepicker').val() == "" ){
         $('#button-1').hide();
@@ -65,6 +67,16 @@ function hideBtn() {
         $('#button-1').show();
         $('#button-2').show();
     }
+
+    $('input[name=citytxt]').change(function() { 
+        hideBtn();
+    });
+    $('input[name=datetxt]').change(function() { 
+        hideBtn();
+    });
 }
 
+
 hideBtn();
+
+
