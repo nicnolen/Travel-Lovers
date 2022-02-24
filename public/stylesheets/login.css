@@ -52,7 +52,7 @@ label {
   color: #000000;
 }
 
-button, input {
+button {
   border: 0;
   font-weight: bold;
   cursor: pointer;
@@ -140,6 +140,10 @@ label {
 form {
   border: 1px solid black;
   background-color: white;
+}
+
+icon-remove-styles {
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=login.css.map */

@@ -52,7 +52,7 @@ label {
   color: #000000;
 }
 
-button, input {
+button {
   border: 0;
   font-weight: bold;
   cursor: pointer;

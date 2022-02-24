@@ -75,7 +75,7 @@ document.getElementById('create-account').addEventListener('click', (event) => {
   document.querySelector('.login-form').setAttribute('style', 'display: none');
 });
 
-document.querySelector('.icon-remove').addEventListener('click', (event) => {
+document.querySelector('.icon-remove-sign').addEventListener('click', (event) => {
   event.preventDefault();
   document.querySelector('.signup-form').setAttribute('style', 'display: none');
   document.querySelector('.login-form').removeAttribute('style');
