@@ -133,4 +133,13 @@ main {
   margin: 0 auto;
 }
 
+.ui-datepicker {
+  background-color: #ffaa4d;
+}
+
+.ui-datepicker-title {
+  color: #2bd2ff;
+  font-weight: bold;
+}
+
 /*# sourceMappingURL=dashboard.css.map */

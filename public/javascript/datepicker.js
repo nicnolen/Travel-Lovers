@@ -1,11 +1,11 @@
-$( function() {
-    $( "#datepicker" ).datepicker();
+$(function () {
+  $('#datepicker').datepicker();
 });
 
-$( function() {
-    $( "#datepicker1" ).datepicker();
+$(function () {
+  $('#datepicker1').datepicker();
 });
 
-$( function() {
-    $( "#datepicker2" ).datepicker();
+$(function () {
+  $('#datepicker2').datepicker();
 });
