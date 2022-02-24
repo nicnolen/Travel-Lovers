@@ -44,7 +44,7 @@ button {
   border: 0;
   padding: 1%;
   font-weight: bold;
-  cursor: pointer;
+  curser: pointer;
   border-radius: 5px;
 }
 
@@ -82,11 +82,21 @@ footer {
   width: 100%;
 }
 
+#btnSection {
+  margin-bottom: 25px;
+  margin-left: 80px;
+}
+
+#btnSection {
+  margin-bottom: 25px;
+  margin-left: 80px;
+}
+
 /* LOGIN STYLES */
 html {
   margin: 0 auto;
   background: url(/assets/images/airplane-taking-off.jpg);
-  background-position: center;
+  background-postition: center;
   background-repeat: no-repeat;
   background-size: cover;
 }

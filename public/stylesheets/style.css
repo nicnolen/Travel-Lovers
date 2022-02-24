@@ -44,7 +44,7 @@ button {
   border: 0;
   padding: 1%;
   font-weight: bold;
-  cursor: pointer;
+  curser: pointer;
   border-radius: 5px;
 }
 
@@ -82,16 +82,14 @@ footer {
   width: 100%;
 }
 
-#btnSection{
- margin-bottom: 25px;
- margin-left: 80px;
-  
-}
-
-#btnSection{
+#btnSection {
   margin-bottom: 25px;
   margin-left: 80px;
-   
- }
+}
+
+#btnSection {
+  margin-bottom: 25px;
+  margin-left: 80px;
+}
 
 /*# sourceMappingURL=style.css.map */
