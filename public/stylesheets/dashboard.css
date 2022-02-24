@@ -59,14 +59,14 @@ button {
   border-radius: 5px;
 }
 
-.btn-nav, .btn-login, .btn-save, .btn-add {
+.btn-nav, .btn-login, .btn-add {
   background-color: #ff3399;
   background-image: linear-gradient(45deg, #ff3399 0%, #2bd2ff 52%, #2bff88 90%);
   transition: all 0.5s ease-out;
   background-size: 1px 130px;
   background-position: 0 -10px;
 }
-.btn-nav:hover, .btn-login:hover, .btn-save:hover, .btn-add:hover {
+.btn-nav:hover, .btn-login:hover, .btn-add:hover {
   background-position: 1px -50px;
   color: #ea0028;
 }
@@ -95,12 +95,12 @@ button {
 footer {
   font-weight: bolder;
   font-size: 3vh;
-  height: 2vh;
   background-color: #ea0028;
   background-image: linear-gradient(180deg, #ff9a8b 0%, #ea0028 100%);
   background-size: 1px 350px;
+  clear: both;
   position: relative;
-  bottom: 0;
+  height: 2vh;
 }
 
 .copyright {
@@ -122,5 +122,15 @@ footer {
 }
 
 /* DASHBOARD STYLES */
+main {
+  background: url(/assets/images/homepage.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-width: 100%;
+  width: 100%;
+  min-height: 100%;
+  margin: 0 auto;
+}
 
 /*# sourceMappingURL=dashboard.css.map */

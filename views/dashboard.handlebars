@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>bulma cards</title>
+        <link rel='stylesheet' href='/stylesheets/dashboard.css' />
         <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     </head>
     <body>
@@ -24,8 +24,8 @@
                 <i class="icon-calendar"></i> <input placeholder="Date" type="text" id="datepicker">
                     
                 <div id="btnSection">
-                    <button id="button-1" onclick="addItem()"><i class="icon-plus-sign-alt pr-1"></i>Add</button>
-                    <button id="button-2" onclick="removeItem()"><i class="icon-remove pr-1"></i>Remove</button>
+                    <button id="button-1" onclick="addItem()" class="btn-add"><i class="icon-plus-sign-alt pr-1"></i>Add</button>
+                    <button id="button-2" onclick="removeItem()" class="btn-delete"><i class="icon-remove pr-1"></i>Remove</button>
                 </div>
                 <div>
                     <ul id="dynamic-list"></ul>
@@ -33,6 +33,7 @@
             </div>
         </article>
     </div>
+    
     
     {{!-- Card 2 --}}
     <div class="column is-wide">
@@ -45,8 +46,8 @@
                 <br>
                 <i class="icon-calendar"></i> <input placeholder="Date" type="text" id="datepicker1">
                 <div id="btnSection">
-                  <button onclick="addItem1()"><i class="icon-plus-sign-alt pr-1"></i>Add</button>
-                  <button onclick="removeItem1()"><i class="icon-remove pr-1"></i>Remove</button>
+                  <button onclick="addItem1()" class="btn-add"><i class="icon-plus-sign-alt pr-1"></i>Add</button>
+                  <button onclick="removeItem1()" class="btn-delete"><i class="icon-remove pr-1"></i>Remove</button>
                 </div>
             
                 <ul id="dynamic-list1"></ul>
@@ -65,14 +66,13 @@
                 <br>
                 <i class="icon-calendar"></i> <input placeholder="Date" type="text" id="datepicker2">
                 <div id="btnSection"> 
-                    <button onclick="addItem2()"><i class="icon-plus-sign-alt pr-1"></i>Add</button>
-                    <button onclick="removeItem2()"><i class="icon-remove pr-1"></i>Remove</button>
+                    <button onclick="addItem2()" class="btn-add"><i class="icon-plus-sign-alt pr-1"></i>Add</button>
+                    <button onclick="removeItem2()" class="btn-delete"><i class="icon-remove pr-1"></i>Remove</button>
                 </div>
             <div>
                 <ul id="dynamic-list2"></ul>
             </div>
         </article>
-    </div>
     </div>
 </section>
 
