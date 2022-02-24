@@ -13,7 +13,6 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store); // I
 // FILE PATHS
 const sequelize = require('./config/connection');
 const helpers = require('./utils/helpers');
-const {allowInsecurePrototypeAccess} = require('@handlebars/allow-prototype-access')
 
 // Set up Express.js session and connect session to Sequelize database
 const sess = {
@@ -37,7 +36,6 @@ app.use(session(sess));
 // Create a new Handlebars helper
 const hbs = exphbs.create({ 
   helpers,
-  handlebars: allowInsecurePrototypeAccess(Handlebars)
 });
 
 // Set Handlebars.js as app's template engine choice

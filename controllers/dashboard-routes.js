@@ -2,17 +2,6 @@ const router = require("express").Router();
 const {Place, User, Post,} = require("../models/");
 const withAuth = require("../utils/auth");
 
-<<<<<<< HEAD
-router.get('/', (req, res) => {
-  Place.findAll({})
-  .then(placeData => {
-    console.log(placeData)
-    res.render('dashboard');
-  })  
-})
-
-module.exports = router;
-=======
 
 
 
@@ -208,4 +197,3 @@ router.get("/bucketlist", (req, res) => {
 
 
   module.exports = router;
->>>>>>> 17c380c1925cabf9052f291a2d79763afdb80e0c

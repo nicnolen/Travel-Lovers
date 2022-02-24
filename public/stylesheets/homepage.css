@@ -35,11 +35,15 @@ nav {
 a, button {
   text-decoration: none;
   font-weight: bold;
-  color: #225ca3;
   transition: color 0.1s;
-}
-a:hover, button:hover {
-  font-weight: bold;
+  cursor: pointer;
+  justify-content: center;
+  padding-bottom: calc(0.5em - 1px);
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: calc(0.5em - 1px);
+  text-align: center;
+  white-space: nowrap;
 }
 
 label {
@@ -50,9 +54,8 @@ label {
 
 button, input {
   border: 0;
-  padding: 1%;
   font-weight: bold;
-  curser: pointer;
+  cursor: pointer;
   border-radius: 5px;
 }
 
@@ -80,9 +83,13 @@ button, input {
   color: #ffffff;
 }
 
+.btn-logout {
+  margin-left: 1em;
+}
+
 .btn-nav, .btn-logout {
   margin-right: 1.5vw;
-  padding: 1vw;
+  padding: 1em;
 }
 
 footer {
@@ -102,11 +109,13 @@ footer {
   right: 2vh;
 }
 
-html {
+/* HOMEPAGE STYLES */
+main {
   background: url(/assets/images/homepage.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  min-width: 100%;
 }
 
 /*# sourceMappingURL=homepage.css.map */

@@ -23,7 +23,6 @@
   },
   "homepage": "https://github.com/nicnolen/Travel-App#readme",
   "dependencies": {
-    "@handlebars/allow-prototype-access": "^1.0.5",
     "bcrypt": "^5.0.1",
     "connect-session-sequelize": "^7.1.2",
     "dotenv": "^16.0.0",

@@ -43,10 +43,15 @@ nav
 a, button
   text-decoration: none
   font-weight: bold
-  color: $dark-blue
   transition: color 0.1s
-  &:hover 
-    font-weight: bold
+  cursor: pointer
+  justify-content: center
+  padding-bottom: calc(0.5em - 1px)
+  padding-left: 1em
+  padding-right: 1em
+  padding-top: calc(0.5em - 1px)
+  text-align: center
+  white-space: nowrap
 
 label
  font-weight: bolder
@@ -55,9 +60,8 @@ label
 
 button, input
   border: 0
-  padding: 1%
   font-weight: bold
-  curser: pointer
+  cursor: pointer
   border-radius: 5px
 
 .btn-nav, .btn-login, .btn-save, .btn-add
@@ -80,9 +84,13 @@ button, input
     background-position: 1px -50px
     color: $white
 
+.btn-logout
+  margin-left: 1em
+
 .btn-nav, .btn-logout
   margin-right: 1.5vw
-  padding: 1vw
+  padding: 1em
+
 
 footer
   font-weight: bolder

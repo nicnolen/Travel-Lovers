@@ -1,21 +1,36 @@
-<div class="container">
-    <div class="board">
-        <div class="block" id="bucketlist">
-          <a href="/dashboard/bucketlist">BUCKETLIST</a>
-        </div>
-        <div class="block" id="visiting">
-          <a href="/dashboard/traveling">TRAVELING</a>
-        </div>
-        <div class="block" id="visited">
-          <a href="/dashboard/food">FOOD</a>
-        </div>
-        <div class="block" id="dashboard">
-            <a href="/dashboard/lifestyle">LIFESTYPE</a>
-        </div>
+<div class='container'>
+  <div class='board is-flex is-justify-content-center'>
+    <a href='/dashboard/bucketlist'>
+      <button class='btn-nav' id='bucketlist'><i
+          class='icon-bitbucket pr-2'
+        ></i>
+        Bucketlist
+      </button>
+    </a>
+    <a href='/dashboard/traveling'>
+      <button class='btn-nav' id='visiting'><i
+          class='icon-plane icon-large pr-2'
+        ></i>
+        Traveling
+      </button>
+    </a>
+    <a href='/dashboard/food'><button class='block btn-nav' id='visited'><i
+          class='icon-food pr-2'
+        ></i>
+         Food
+      </button>
+    </a>
+    <a href='/dashboard/lifestyle'><button
+        class='block btn-nav'
+        id='dashboard'
+      ><i class='icon-shopping-cart'></i>
+         Lifestyle
+      </button></a>
+  </div>
 
-  {{!-- <div>
+  {{! <div>
     <a href="/dashboard/new">➕ New Post</a>
-  </div> --}}
+  </div> }}
   {{!-- <div>
     {{#each places}}
     
@@ -30,26 +45,31 @@
     <a class="list-item flex-row justify-space-between" href="/dashboard/edit/{{id}}">
         <span>{{title}}</span>
         {{!-- <span>{{format_date createdAt}}</span> --}}
-    {{!-- </a> --}}
-    {{!-- {{/each}}
-</div> --}} 
+  {{! </a> }}
+  {{!-- {{/each}}
+</div> --}}
 
-
-<div class="posts list-group">
+  <div class='posts list-group'>
     <span>{{lifestyle_post.title}}</span>
     <span>{{lifestyle_post.author}}</span>
-  <a class="list-item flex-row justify-space-between" href="/dashboard/lifestyle/edit/{{lifestyle_post.id}}">
-    
-    <div>{{lifestyle_post.body}}</div>
-  </a>
-</div>
+    <a
+      class='list-item flex-row justify-space-between'
+      href='/dashboard/lifestyle/edit/{{lifestyle_post.id}}'
+    >
 
+      <div>{{lifestyle_post.body}}</div>
+    </a>
+  </div>
 
-<div class="posts list-group">
+  <div class='posts list-group'>
     <span>{{traveling_post.title}}</span>
     <span>{{traveling_post.author}}</span>
-  <a class="list-item flex-row justify-space-between" href="/dashboard/lifestyle/edit/{{traveling_post.id}}">
-    
-    <div>{{traveling_post.body}}</div>
-  </a>
+    <a
+      class='list-item flex-row justify-space-between'
+      href='/dashboard/lifestyle/edit/{{traveling_post.id}}'
+    >
+
+      <div>{{traveling_post.body}}</div>
+    </a>
+  </div>
 </div>
