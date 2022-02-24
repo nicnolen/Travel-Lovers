@@ -108,6 +108,17 @@ footer {
   font-size: 2vh;
   bottom: 2vh;
   right: 2vh;
+  width: 100%;
+}
+
+#btnSection {
+  margin-bottom: 25px;
+  margin-left: 80px;
+}
+
+#btnSection {
+  margin-bottom: 25px;
+  margin-left: 80px;
 }
 
 /* HOMEPAGE STYLES */

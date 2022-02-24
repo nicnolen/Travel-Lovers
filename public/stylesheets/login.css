@@ -55,7 +55,7 @@ label {
 button, input {
   border: 0;
   font-weight: bold;
-  curser: pointer;
+  cursor: pointer;
   border-radius: 5px;
 }
 
@@ -108,6 +108,7 @@ footer {
   font-size: 2vh;
   bottom: 2vh;
   right: 2vh;
+  width: 100%;
 }
 
 #btnSection {
@@ -124,7 +125,7 @@ footer {
 main {
   margin: 0 auto;
   background: url(/assets/images/airplane-taking-off.jpg);
-  background-postition: center;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
