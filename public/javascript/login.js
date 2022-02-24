@@ -30,7 +30,7 @@ async function signupFormHandler(event) {
       errorEl.innerHTML = '';
       document.location.replace('/dashboard/');
     } else {
-      errorEl.innerHTML = `<b>${response.statusText}:</b> <i>User already exists</i>`;
+      errorEl.innerHTML = `<b>${response.statusText}:</b> User already exists`;
     }
   }
 }
@@ -58,7 +58,7 @@ async function loginFormHandler(event) {
       errorEl.innerHTML = '';
       document.location.replace('/dashboard');
     } else {
-      errorEl.innerHTML = `<b>${response.statusText}:</b> <i>User not found</i>`;
+      errorEl.innerHTML = `<b>${response.statusText}:</b> User not found`;
     }
   }
 }
