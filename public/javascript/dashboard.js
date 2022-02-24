@@ -1,4 +1,5 @@
 
+
 function addItem(){
     var ul = document.getElementById("dynamic-list");
     var candidate = document.getElementById("candidate");
@@ -6,7 +7,7 @@ function addItem(){
     var calendar = document.getElementById("datepicker");
     li.setAttribute('id',candidate.value);
     li.setAttribute('cal', calendar.value);
-    li.appendChild(document.createTextNode(candidate.value));
+    li.appendChild(document.createTextNode(candidate.value + " "));
     li.appendChild(document.createTextNode(calendar.value));
     ul.appendChild(li);
 
@@ -26,7 +27,7 @@ function addItem1(){
     var calendar = document.getElementById("datepicker1");
     li.setAttribute('id',candidate.value);
     li.setAttribute('cal', calendar.value);
-    li.appendChild(document.createTextNode(candidate.value));
+    li.appendChild(document.createTextNode(candidate.value + " "));
     li.appendChild(document.createTextNode(calendar.value));
     ul.appendChild(li);
 }
@@ -45,7 +46,7 @@ function addItem2(){
     var calendar = document.getElementById("datepicker2");
     li.setAttribute('id',candidate.value);
     li.setAttribute('cal', calendar.value);
-    li.appendChild(document.createTextNode(candidate.value));
+    li.appendChild(document.createTextNode(candidate.value + " "));
     li.appendChild(document.createTextNode(calendar.value));
     ul.appendChild(li);
 }
@@ -57,14 +58,3 @@ function removeItem2(){
     ul.removeChild(item);
 }
 
-function hideBtn() {
-    if($('#candidate').val() == "" && $('#datepicker').val() == "" ){
-        $('#button-1').hide();
-        $('#button-2').hide();
-    } else {
-        $('#button-1').show();
-        $('#button-2').show();
-    }
-}
-
-hideBtn();

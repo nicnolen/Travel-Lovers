@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>bulma cards</title>
-        <link rel='stylesheet' href='https://unpkg.com/bulma@0.9.0/css/bulma.min.css'>
+        <link rel='stylesheet' href="../stylesheets/style.css" href='https://unpkg.com/bulma@0.9.0/css/bulma.min.css'>
         <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     </head>
     <body>
@@ -21,8 +21,7 @@
                 <input placeholder="City" type="text" id="candidate"/>
                     <br>
                 <input placeholder="Date" type="text" id="datepicker">
-                    <br>
-                    <br>
+                    
                 <div id="btnSection">
                     <button id="button-1" onclick="addItem()">Add</button>
                     <button id="button-2" onclick="removeItem()">Remove</button>
@@ -44,9 +43,7 @@
                 <input placeholder="City" type="text" id="candidate1"/>
                 <br>
                 <input placeholder="Date" type="text" id="datepicker1">
-                <br>
-                <br>
-                <div>
+                <div id="btnSection">
                   <button onclick="addItem1()">Add</button>
                   <button onclick="removeItem1()">Remove</button>
                 </div>
@@ -66,10 +63,10 @@
                 <input placeholder="City" type="text" id="candidate2"/>
                 <br>
                 <input placeholder="Date" type="text" id="datepicker2">
-                <br>
-                <br>
-                <button onclick="addItem2()">Add</button>
-                <button onclick="removeItem2()">Remove</button>
+                <div id="btnSection"> 
+                    <button onclick="addItem2()">Add</button>
+                    <button onclick="removeItem2()">Remove</button>
+                </div>
             <div>
                 <ul id="dynamic-list2"></ul>
             </div>
