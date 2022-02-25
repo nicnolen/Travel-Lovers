@@ -1,0 +1,49 @@
+/* GENERAL STYLES */
+/* Colors. NOTE: bg means its a background color, no bg means its a text color*/ 
+    $bg-green: #0b960b
+    $bg-yellow: #d5eb16
+    $bg-red: #d40707
+    $title-bg-primary: #0b96c0
+    $text-white: #f1f1f1
+    %border-color: #000000
+     
+
+* 
+  box-sizing: border-box
+
+
+/* Style the h1 */
+h1 
+  background-color: $title-bg-primary
+  background-image: linear-gradient(45deg, $title-bg-primary 0%, $title-bg-secondary 50%)
+  transition: all 0.5s ease-out
+  background-size: 1400px 1px
+  background-position: -10px 0px
+  color: $text-white
+
+
+/* SPECIFIC CLASSES */
+/* Weather condiions spacing */
+.list-group-item 
+  border: none
+  padding: 1rem
+  font-weight: normal
+
+
+/* UV Index */
+.favorable 
+  background-color: $bg-green
+  color: $text-white
+
+.moderate 
+  background-color: $bg-yellow
+ 
+.severe 
+  background-color: $bg-red
+  color: $text-white
+
+
+/* Border for the forecast title */
+.border-style 
+  border-bottom: 3px solid $border-color
+
