@@ -49,7 +49,7 @@ router.get('/traveling/new', (req, res) => {
   res.render('new-post', {});
 });
 
-router.get('/traveling/edit/:id', (req, res) => {
+router.get('/traveling/edit/:id', withAuth, (req, res) => {
   Post.findByPk(req.params.id)
     .then((dbPostData) => {
       if (dbPostData) {
@@ -115,7 +115,7 @@ router.get('/lifestyle/new', (req, res) => {
   res.render('new-post', {});
 });
 
-router.get('/lifestyle/edit/:id', (req, res) => {
+router.get('/lifestyle/edit/:id', withAuth, (req, res) => {
   Post.findByPk(req.params.id)
     .then((dbPostData) => {
       if (dbPostData) {
@@ -162,7 +162,7 @@ router.get('/bucketlist/new', (req, res) => {
   res.render('new-post', {});
 });
 
-router.get('/bucketlist/edit/:id', (req, res) => {
+router.get('/bucketlist/edit/:id', withAuth, (req, res) => {
   Post.findByPk(req.params.id)
     .then((dbPostData) => {
       if (dbPostData) {

@@ -2,7 +2,7 @@ const router = require("express").Router();
 const { Post } = require("../../models/");
 const withAuth = require("../../utils/auth");
 
-router.post("/", (req, res) => {
+router.post("/", withAuth, (req, res) => {
     const body = req.body;
     console.info(req.session.userId);
     Post.create({ ...body, userId: req.session.userId })
@@ -14,7 +14,7 @@ router.post("/", (req, res) => {
         });
 });
 
-router.put("/:id",  (req, res) => {
+router.put("/:id", withAuth, (req, res) => {
     Post.update(req.body, {
         where: {
             id: req.params.id
@@ -32,7 +32,7 @@ router.put("/:id",  (req, res) => {
         });
 });
 
-router.delete("/:id",  (req, res) => {
+router.delete("/:id", withAuth, (req, res) => {
     Post.destroy({
         where: {
             id: req.params.id
