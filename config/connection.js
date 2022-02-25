@@ -6,10 +6,10 @@ require('dotenv').config();
 
 // create connection to our database, pass in your MySQL information for username and password
 const sequelize = new Sequelize(
-  process.env.DB_NAME || dbConnection.DB, 
-  process.env.DB_USER || dbConnection.USER, 
-  process.env.DB_PW || dbConnection.PASSWORD, {
-  host: 'localhost' || dbConnection.HOST,
+  "heroku_c56645ec48a49c9", 
+  "bbfb9e375921eb", 
+  "6076cf4f", {
+  host: "us-cdbr-east-05.cleardb.net",
   dialect: 'mysql',
   port: 3306
 });
