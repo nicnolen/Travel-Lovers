@@ -16,7 +16,7 @@ const helpers = require('./utils/helpers');
 
 // Set up Express.js session and connect session to Sequelize database
 const sess = {
-  secret: "secret", // session cookie id
+  secret: process.env.SECRET_ID, // session cookie id
   cookie: {
     expires: 60 * 60 * 1000, // session expires in 1 hour
   },
