@@ -10,8 +10,15 @@ function addItem(){
     li.appendChild(document.createTextNode(candidate.value + " "));
     li.appendChild(document.createTextNode(calendar.value));
     ul.appendChild(li);
-
 }
+    
+
+// Do something with your data.
+// function loadStuff() {
+//   return saveData.obj || "default";
+// }
+//     }
+// }
 
 function removeItem(){
     var ul = document.getElementById("dynamic-list");

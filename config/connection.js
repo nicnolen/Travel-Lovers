@@ -1,5 +1,6 @@
 // import the Sequelize constructor from the library
 const Sequelize = require('sequelize');
+const dbConnection = require('./db.connection.js');
 
 require('dotenv').config();
 
@@ -16,6 +17,9 @@ if (process.env.JAWSDB_URL) {
     process.env.DB_NAME,
     process.env.DB_USER,
     process.env.DB_PW,
+    'heroku_c56645ec48a49c9',
+    'bbfb9e375921eb',
+    '6076cf4f',
     {
       host: 'localhost', // Host is the system that contains the data. localhost means that the data is on your local computer
       dialect: 'mysql', // Telling us what sql dialect we are using
