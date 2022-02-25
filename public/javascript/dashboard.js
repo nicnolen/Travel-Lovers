@@ -73,7 +73,17 @@ function removeItem2() {
 }
 
 // EVENT LISTENERS
-// Event listener for the buttons
+// Event listener for the bucketlist button
 button.addEventListener('click', () => {
+  document.location.replace('/');
+});
+
+// Event listener for the visting button
+button1.addEventListener('click', () => {
+  document.location.replace('/');
+});
+
+// Event listener for the visited button
+button2.addEventListener('click', () => {
   document.location.replace('/');
 });
