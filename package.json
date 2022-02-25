@@ -1,12 +1,17 @@
 {
-  "name": "travel-app",
+  "name": "travel-lover",
   "version": "1.0.0",
+  "engines": {
+    "npm": "6.x",
+    "node": "14.x"
+  },
   "description": "Travel app that allows people to add destinations to a bucket list, seasonal, planned and already visited",
   "main": "server.js",
   "scripts": {
     "test": "jest",
     "start": "run-p sass:watch watch",
-    "watch": "nodemon server.js",
+    "dev": "run-p sass:watch watch seeds",
+    "watch": "node server.js",
     "seeds": "node seeds/index.js",
     "sass:build": "sass public/sass:public/stylesheets",
     "sass:watch": "sass --watch public/sass:public/stylesheets"
@@ -31,7 +36,8 @@
     "mysql2": "^2.3.3",
     "npm-run-all": "^4.1.5",
     "sass": "^1.49.8",
-    "sequelize": "^6.16.1"
+    "sequelize": "^6.16.1",
+    "fsevents": "^2.3.2"
   },
   "devDependencies": {
     "eslint": "^8.9.0",
@@ -40,5 +46,8 @@
     "jest": "^27.5.1",
     "nodemon": "^2.0.15",
     "prettier": "2.5.1"
+  },
+  "optionalDependencies": {
+    "fsevents": "^2.3.2"
   }
 }
