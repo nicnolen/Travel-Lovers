@@ -9,7 +9,7 @@ const sequelize = new Sequelize(
   process.env.DB_NAME || dbConnection.DB, 
   process.env.DB_USER || dbConnection.USER, 
   process.env.DB_PW || dbConnection.PASSWORD, {
-  host: 'localhost',
+  host: 'localhost' || dbConnection.HOST,
   dialect: 'mysql',
   port: 3306
 });
