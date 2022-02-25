@@ -156,8 +156,7 @@ main {
   background-size: 1px 130px;
   background-position: 0 -10px;
   text-align: center;
-  display: flex;
-  align-items: center;
+  font-weight: bold;
 }
 .btn-dashboard:hover {
   background-position: 1px -50px;
