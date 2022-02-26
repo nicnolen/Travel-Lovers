@@ -1,5 +1,3 @@
-// GLOBAL VARIABLES
-
 function addItem() {
   var ul = document.getElementById('dynamic-list');
   var candidate = document.getElementById('candidate');
@@ -10,13 +8,17 @@ function addItem() {
   li.setAttribute('cal', calendar.value);
   li.appendChild(document.createTextNode(candidate.value + ' '));
   li.appendChild(document.createTextNode(calendar.value));
-  button.innerHTML = '<br>';
-  button.textContent = 'Travel Information';
-  button.classList.add('button', 'btn-dashboard');
-  // Event listener for the bucketlist button
-  button.addEventListener('click', () => {
-    document.location.replace('/');
-  });
+  if (candidate.value) {
+    button.innerHTML = '<br>';
+    button.textContent = 'Travel Information';
+    button.classList.add('button', 'btn-dashboard');
+    // Event listener for the visited button
+    button.addEventListener('click', () => {
+      document.location.replace('/');
+    });
+  } else {
+    document.querySelector('.error-text').innerHTML = 'Must put in city name';
+  }
   li.appendChild(button);
   ul.appendChild(li);
 }
@@ -38,13 +40,17 @@ function addItem1() {
   li.setAttribute('cal', calendar.value);
   li.appendChild(document.createTextNode(candidate.value + ' '));
   li.appendChild(document.createTextNode(calendar.value));
-  button1.innerHTML = '<br>';
-  button1.textContent = 'Travel Information';
-  button1.classList.add('button', 'btn-dashboard');
-  // Event listener for the visting button
-  button1.addEventListener('click', () => {
-    document.location.replace('/');
-  });
+  if (candidate.value) {
+    button1.innerHTML = '<br>';
+    button1.textContent = 'Travel Information';
+    button1.classList.add('button', 'btn-dashboard');
+    // Event listener for the visited button
+    button1.addEventListener('click', () => {
+      document.location.replace('/');
+    });
+  } else {
+    document.querySelector('.error-text1').innerHTML = 'Must put in city name';
+  }
   li.appendChild(button1);
   ul.appendChild(li);
 }
@@ -66,13 +72,18 @@ function addItem2() {
   li.setAttribute('cal', calendar.value);
   li.appendChild(document.createTextNode(candidate.value + ' '));
   li.appendChild(document.createTextNode(calendar.value));
-  button2.innerHTML = '<br>';
-  button2.textContent = 'Travel Information';
-  button2.classList.add('button', 'btn-dashboard');
-  // Event listener for the visited button
-  button2.addEventListener('click', () => {
-    document.location.replace('/');
-  });
+
+  if (candidate.value) {
+    button2.innerHTML = '<br>';
+    button2.textContent = 'Travel Information';
+    button2.classList.add('button', 'btn-dashboard');
+    // Event listener for the visited button
+    button2.addEventListener('click', () => {
+      document.location.replace('/');
+    });
+  } else {
+    document.querySelector('.error-text2').innerHTML = 'Must put in city name';
+  }
 
   li.appendChild(button2);
   ul.appendChild(li);
