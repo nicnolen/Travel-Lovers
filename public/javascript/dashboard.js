@@ -12,13 +12,13 @@ function addItem() {
     button.innerHTML = '<br>';
     button.textContent = 'Travel Information';
     button.classList.add('button', 'btn-dashboard');
-    // Event listener for the visited button
-    button.addEventListener('click', () => {
-      document.location.replace('/');
-    });
   } else {
     document.querySelector('.error-text').innerHTML = 'Must put in city name';
   }
+  // Event listener for the visited button
+  button.addEventListener('click', () => {
+    document.location.replace('/');
+  });
   li.appendChild(button);
   ul.appendChild(li);
 }
@@ -44,13 +44,13 @@ function addItem1() {
     button1.innerHTML = '<br>';
     button1.textContent = 'Travel Information';
     button1.classList.add('button', 'btn-dashboard');
-    // Event listener for the visited button
-    button1.addEventListener('click', () => {
-      document.location.replace('/');
-    });
   } else {
     document.querySelector('.error-text1').innerHTML = 'Must put in city name';
   }
+  // Event listener for the visited button
+  button1.addEventListener('click', () => {
+    document.location.replace('/');
+  });
   li.appendChild(button1);
   ul.appendChild(li);
 }
@@ -77,14 +77,13 @@ function addItem2() {
     button2.innerHTML = '<br>';
     button2.textContent = 'Travel Information';
     button2.classList.add('button', 'btn-dashboard');
-    // Event listener for the visited button
-    button2.addEventListener('click', () => {
-      document.location.replace('/');
-    });
   } else {
     document.querySelector('.error-text2').innerHTML = 'Must put in city name';
   }
-
+  // Event listener for the visited button
+  button2.addEventListener('click', () => {
+    document.location.replace('/');
+  });
   li.appendChild(button2);
   ul.appendChild(li);
 }
