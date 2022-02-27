@@ -1,6 +1,10 @@
 /* BASE REUSABLE STYLESHEET */
-body, html {
+html, body {
   min-height: 100%;
+}
+
+#error-message {
+  color: white;
 }
 
 .wrapper {
@@ -10,60 +14,67 @@ body, html {
   margin: 0 auto;
 }
 
+h1 {
+  font-size: 4vh;
+  padding-right: 2vw;
+  display: inline-block;
+}
+
 nav {
   background-color: #ff3399;
   background-image: linear-gradient(to bottom, #0000cc 0%, #ff3399 100%);
   color: #ffffff;
-  transition: all 0.5s ease-out;
-  background-size: 1px 100px;
+  background-size: 1px 400px;
   background-position: 0 -10px;
   padding: 2vh;
   min-width: 100vw;
-}
-
-h1, nav {
   display: inline-block;
 }
 
-a {
+a, button {
   text-decoration: none;
   font-weight: bold;
-  color: #225ca3;
   transition: color 0.1s;
-}
-a:hover {
-  font-weight: bold;
-  color: #ea0028;
+  cursor: pointer;
+  justify-content: center;
+  padding-bottom: calc(0.5em - 1px);
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: calc(0.5em - 1px);
+  text-align: center;
+  white-space: nowrap;
 }
 
 label {
-  font-weight: bold;
+  font-weight: bolder;
+  font-size: 1.5vh;
+  color: #000000;
 }
 
 button {
   border: 0;
-  padding: 1%;
   font-weight: bold;
-  curser: pointer;
+  cursor: pointer;
   border-radius: 5px;
 }
 
-.btn-login, .btn-save, .btn-add, .btn-homepage {
+.btn-nav, .btn-login, .btn-add {
   background-color: #ff3399;
   background-image: linear-gradient(45deg, #ff3399 0%, #2bd2ff 52%, #2bff88 90%);
   transition: all 0.5s ease-out;
-  background-size: 1px 100px;
+  background-size: 1px 130px;
   background-position: 0 -10px;
 }
-.btn-login:hover, .btn-save:hover, .btn-add:hover, .btn-homepage:hover {
+.btn-nav:hover, .btn-login:hover, .btn-add:hover {
   background-position: 1px -50px;
+  color: #ea0028;
 }
 
 .btn-delete, .btn-logout {
   background-color: #ea0028;
   background-image: linear-gradient(180deg, #ff9a8b 0%, #ea0028 100%);
   transition: all 0.5s ease-out;
-  background-size: 1px 100px;
+  background-size: 1px 130px;
   background-position: 0 -10px;
 }
 .btn-delete:hover, .btn-logout:hover {
@@ -71,21 +82,53 @@ button {
   color: #ffffff;
 }
 
+.btn-logout {
+  margin-left: 1em;
+}
+
+.btn-nav, .btn-logout {
+  margin-right: 1.5vw;
+  padding: 2em;
+}
+
 footer {
-  font-weight: bold;
-  height: 2vh;
-  background-color: #ea0028;
+  font-weight: bolder;
+  font-size: 3vh;
   background-image: linear-gradient(180deg, #ff9a8b 0%, #ea0028 100%);
-  background-size: 1px 150px;
-  bottom: 0;
+  background-size: 1px 350px;
+  clear: both;
+  position: relative;
+  height: 2vh;
+}
+
+.copyright {
+  position: absolute;
+  font-size: 2vh;
+  bottom: 2vh;
+  right: 2vh;
   width: 100%;
 }
 
-html {
+#btnSection {
+  margin-bottom: 25px;
+  margin-left: 80px;
+}
+
+#btnSection {
+  margin-bottom: 25px;
+  margin-left: 80px;
+}
+
+/* HOMEPAGE STYLES */
+main {
   background: url(/assets/images/homepage.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  min-width: 100%;
+  width: 100%;
+  min-height: 100%;
+  margin: 0 auto;
 }
 
 /*# sourceMappingURL=homepage.css.map */

@@ -4,6 +4,7 @@
 $dark-blue: #225ca3
 $red: #ea0028
 $white: #ffffff
+$black: #000000
 $pink: #fA8Bff
 $sky-blue: #2bd2ff
 $light-green: #2bff88
@@ -11,72 +12,107 @@ $light-orange: #ff9a8b
 $purple: #0000cc
 $pink: #ff3399
 
-body, html
+html, body
   min-height: 100%
-  
+
+#error-message
+  color: white
+
 .wrapper 
   width: 100%
   min-height: 100%
   max-width: 1200px
   margin: 0 auto
 
+h1 
+  font-size: 4vh
+  padding-right: 2vw
+  display: inline-block
+
 nav
   background-color: $pink
-  background-image: linear-gradient(to bottom, #0000cc 0%, #ff3399 100%)
+  background-image: linear-gradient(to bottom, $purple 0%, $pink 100%)
   color: $white
-  transition: all .5s ease-out
-  background-size: 1px 100px
+  background-size: 1px 400px
   background-position: 0 -10px
   padding: 2vh
   min-width: 100vw
-
-h1, nav 
   display: inline-block
 
-a 
+a, button
   text-decoration: none
   font-weight: bold
-  color: $dark-blue
   transition: color 0.1s
-  &:hover 
-    font-weight: bold
-    color: $red
+  cursor: pointer
+  justify-content: center
+  padding-bottom: calc(0.5em - 1px)
+  padding-left: 1em
+  padding-right: 1em
+  padding-top: calc(0.5em - 1px)
+  text-align: center
+  white-space: nowrap
 
 label
- font-weight: bold
+ font-weight: bolder
+ font-size: 1.5vh
+ color: $black
 
 button
   border: 0
-  padding: 1%
   font-weight: bold
-  curser: pointer
+  cursor: pointer
   border-radius: 5px
 
-.btn-login, .btn-save, .btn-add, .btn-homepage
+.btn-nav, .btn-login, .btn-add
   background-color: $pink
   background-image: linear-gradient(45deg, $pink 0%, $sky-blue 52%, $light-green 90%)
   transition: all .5s ease-out
-  background-size: 1px 100px
+  background-size: 1px 130px
   background-position: 0 -10px
   &:hover
     background-position: 1px -50px
+    color: $red
 
 .btn-delete, .btn-logout
   background-color: $red
   background-image: linear-gradient(180deg, $light-orange 0%, $red 100%)
   transition: all .5s ease-out
-  background-size: 1px 100px
+  background-size: 1px 130px
   background-position: 0 -10px
   &:hover
     background-position: 1px -50px
     color: $white
 
+.btn-logout
+  margin-left: 1em
+
+.btn-nav, .btn-logout
+  margin-right: 1.5vw
+  padding: 2em
+
 
 footer
-  font-weight: bold
-  height: 2vh
-  background-color: $red
+  font-weight: bolder
+  font-size: 3vh
   background-image: linear-gradient(180deg, $light-orange 0%, $red 100%)
-  background-size: 1px 150px
-  bottom: 0
+  background-size: 1px 350px
+  clear: both
+  position: relative
+  height: 2vh
+
+
+.copyright
+  position: absolute
+  font-size: 2vh
+  bottom: 2vh
+  right: 2vh
   width: 100%
+
+#btnSection
+ margin-bottom: 25px
+ margin-left: 80px
+  
+
+#btnSection
+  margin-bottom: 25px
+  margin-left: 80px

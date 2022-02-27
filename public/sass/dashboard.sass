@@ -1,0 +1,32 @@
+/* DASHBOARD STYLES */
+@use 'style'
+
+$assetPath: "/assets/images"
+
+// Colors
+$amber: #ffaa4d
+$sky-blue: #2bd2ff
+
+main
+    background: url(#{$assetPath}/dashboard-image.png)
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    min-width: 100%
+    width: 100%
+    min-height: 100%
+    margin: 0 auto
+
+.ui-datepicker
+  background-color: $amber
+
+.ui-datepicker-title
+  color: $sky-blue
+  font-weight: bold
+  text-align: center
+
+.column 
+  opacity: .93
+
+#btnSection
+  margin-top: 1.5vh

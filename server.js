@@ -33,7 +33,9 @@ const app = express(); // assign express.js as a variable
 app.use(session(sess));
 
 // Create a new Handlebars helper
-const hbs = exphbs.create({ helpers });
+const hbs = exphbs.create({ 
+  helpers,
+});
 
 // Set Handlebars.js as app's template engine choice
 app.engine('handlebars', hbs.engine);
@@ -46,6 +48,7 @@ app.use(express.static(path.join(__dirname, 'public'))); // Takes the content of
 
 // Allow the app to use the controllers
 app.use(require('./controllers'));
+
 
 // turn on connection to db and server
 sequelize.sync({ force: false }).then(() => {

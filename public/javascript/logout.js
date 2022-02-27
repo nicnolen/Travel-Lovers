@@ -4,7 +4,7 @@ const errorEl = document.getElementById('error-message');
 
 // Event handler for logout route
 async function logout() {
-  const response = await fetch('/api/user/logout', {
+  const response = await fetch('/api/users/logout', {
     method: 'post',
     headers: { 'Content-Type': 'application.json' },
   });
@@ -14,7 +14,7 @@ async function logout() {
     errorEl.innerHTML = '';
     document.location.replace('/');
   } else {
-    errorEl.innerHTML = response.statusText;
+    errorEl.innerHTML = `<b>${response.statusText}:</b> Logout failed`;
   }
 }
 

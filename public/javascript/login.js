@@ -30,7 +30,7 @@ async function signupFormHandler(event) {
       errorEl.innerHTML = '';
       document.location.replace('/dashboard/');
     } else {
-      errorEl.innerHTML = response.statusText;
+      errorEl.innerHTML = `<b>${response.statusText}:</b> User already exists`;
     }
   }
 }
@@ -56,9 +56,9 @@ async function loginFormHandler(event) {
     if (response.ok) {
       // clear error
       errorEl.innerHTML = '';
-      document.location.replace('/');
+      document.location.replace('/dashboard');
     } else {
-      errorEl.innerHTML = response.statusText;
+      errorEl.innerHTML = `<b>${response.statusText}:</b> User not found`;
     }
   }
 }
@@ -69,6 +69,17 @@ document
   .querySelector('.signup-form')
   .addEventListener('submit', signupFormHandler);
 
+document.getElementById('create-account').addEventListener('click', (event) => {
+  event.preventDefault();
+  document.querySelector('.signup-form').removeAttribute('style');
+  document.querySelector('.login-form').setAttribute('style', 'display: none');
+});
+
+document.querySelector('.icon-remove-sign').addEventListener('click', (event) => {
+  event.preventDefault();
+  document.querySelector('.signup-form').setAttribute('style', 'display: none');
+  document.querySelector('.login-form').removeAttribute('style');
+});
 // Event listener for the login form
 document
   .querySelector('.login-form')

@@ -21,6 +21,10 @@ const placeData = [
         city: 'Bangkok',
         date: '11/17/22'
     },
+    {
+        city: 'Vietnam',
+        date: '11/17/22'
+    },
 ];
 
 const seedPlaces = () => Place.bulkCreate(placeData);
