@@ -1,0 +1,150 @@
+/* BASE REUSABLE STYLESHEET */
+html, body {
+  min-height: 100%;
+}
+
+#error-message {
+  color: white;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 4vh;
+  padding-right: 2vw;
+  display: inline-block;
+}
+
+nav {
+  background-color: #ff3399;
+  background-image: linear-gradient(to bottom, #0000cc 0%, #ff3399 100%);
+  color: #ffffff;
+  background-size: 1px 400px;
+  background-position: 0 -10px;
+  padding: 2vh;
+  min-width: 100vw;
+  display: inline-block;
+}
+
+a, button {
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.1s;
+  cursor: pointer;
+  justify-content: center;
+  padding-bottom: calc(0.5em - 1px);
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: calc(0.5em - 1px);
+  text-align: center;
+  white-space: nowrap;
+}
+
+label {
+  font-weight: bolder;
+  font-size: 1.5vh;
+  color: #000000;
+}
+
+button {
+  border: 0;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn-nav, .btn-login, .btn-add {
+  background-color: #ff3399;
+  background-image: linear-gradient(45deg, #ff3399 0%, #2bd2ff 52%, #2bff88 90%);
+  transition: all 0.5s ease-out;
+  background-size: 1px 130px;
+  background-position: 0 -10px;
+}
+.btn-nav:hover, .btn-login:hover, .btn-add:hover {
+  background-position: 1px -50px;
+  color: #ea0028;
+}
+
+.btn-delete, .btn-logout {
+  background-color: #ea0028;
+  background-image: linear-gradient(180deg, #ff9a8b 0%, #ea0028 100%);
+  transition: all 0.5s ease-out;
+  background-size: 1px 130px;
+  background-position: 0 -10px;
+}
+.btn-delete:hover, .btn-logout:hover {
+  background-position: 1px -50px;
+  color: #ffffff;
+}
+
+.btn-logout {
+  margin-left: 1em;
+}
+
+.btn-nav, .btn-logout {
+  margin-right: 1.5vw;
+  padding: 2em;
+}
+
+footer {
+  font-weight: bolder;
+  font-size: 3vh;
+  background-image: linear-gradient(180deg, #ff9a8b 0%, #ea0028 100%);
+  background-size: 1px 350px;
+  clear: both;
+  position: relative;
+  height: 2vh;
+}
+
+.copyright {
+  position: absolute;
+  font-size: 2vh;
+  bottom: 2vh;
+  right: 2vh;
+  width: 100%;
+}
+
+#btnSection {
+  margin-bottom: 25px;
+  margin-left: 80px;
+}
+
+#btnSection {
+  margin-bottom: 25px;
+  margin-left: 80px;
+}
+
+/* LOGIN STYLES */
+main {
+  margin: 0 auto;
+  background: url(/assets/images/airplane-taking-off.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  min-height: 100%;
+  margin: 0 auto;
+}
+
+label, h6 {
+  color: #0000cc;
+}
+
+form {
+  border: 1px solid black;
+  background-color: #ffaa4d;
+  opacity: 0.9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.96);
+  border-radius: 15px;
+}
+
+.icon-remove-styles {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=login.css.map */

@@ -1,0 +1,83 @@
+<html lang='en'>
+
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>Travel Lovers</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <style> 
+      
+      </style>
+    <!-- Link Bulma CSS -->
+    <link
+      rel='stylesheet'
+      href='https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css'
+    />
+    <!--Link to Font Awesome -->
+    <link
+      href='//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css'
+      rel='stylesheet'
+    />
+  </head>
+
+  <body>
+    <header class='is-flex is-flex-direction-row'>
+      <nav class='navbar' role='navigation' aria-label='main navigation'>
+        <div class='navbar-brand'>
+          <a
+            class='navbar-item'
+            href='assets/images/travel-lovers-logo.png'
+          ></a>
+          <img
+            alt='Travel Lovers logo'
+            src='assets/images/travel-lovers-logo.png'
+            width='200'
+            height='30'
+          />
+        </div>
+        <div class='navbar-end'>
+          <div class='navbar-item'>
+            <div id='error-message' class='p-5'></div>
+            <div class='buttons'>
+              <a href='/'><button class='btn-nav'><i
+                    class='icon-home icon-large pr-2'
+                  ></i>Homepage</button></a>
+              {{#if loggedIn}}
+                <a href='/dashboard'><button class='btn-nav'><i
+                      class='icon-calendar icon-large pr-2'
+                    ></i>Dashboard</button></a>
+                <button id='logout' class='btn-logout'><i
+                    class='icon-lock icon-large pr-2'
+                  ></i>Logout</button>
+              {{else}}
+                <a href='/login'><button class='btn-nav'><i
+                      class='icon-unlock icon-large pr-2'
+                    ></i>Login</button></a>
+              {{/if}}
+            </div>
+          </div>
+        </div>
+
+      </nav>
+    </header>
+    <main>
+      <div class="body">
+      {{{body}}}
+      </div>
+    </main>
+    <footer class='footer is-size-6-mobile is-size-5-tablet is-size-4-desktop'>
+      <div class='content has-text-centered'>
+        Thanks for visiting!
+      </div>
+      <div class='copyright is-size-7-mobile is-size-6-tablet is-size-5-desktop has-text-right'>
+        Made by Travel Lovers
+        <div>&copy; 2022 Travel Lovers, Inc.</div>
+      </div>
+    </footer>
+
+    {{#if loggedIn}}
+      <script src='/javascript/logout.js'></script>
+    {{/if}}
+  </body>
+
+</html>

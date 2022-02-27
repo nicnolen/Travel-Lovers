@@ -1,0 +1,36 @@
+/* LOGIN STYLES */
+@use 'style'
+
+// Image folder path
+$assetPath: "/assets/images"
+
+// Colors
+$purple: #0000cc
+$amber: #ffaa4d
+
+main
+  margin: 0 auto
+  background: url(#{$assetPath}/airplane-taking-off.jpg)
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+  width: 100%
+  min-height: 100%
+  margin: 0 auto
+
+label, h6
+  color: $purple
+
+form 
+  border: 1px solid black
+  background-color: $amber
+  opacity: .9
+  box-shadow: 0 0 10px rgb(0 0 0 / 96%)
+  border-radius: 15px
+
+.icon-remove-styles
+  cursor: pointer  
+
+
+
+
