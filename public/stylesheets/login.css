@@ -7,7 +7,7 @@ html, body {
 }
 
 #error-message {
-  color: white;
+  color: #ffffff;
 }
 
 .wrapper {
@@ -110,11 +110,6 @@ footer .copyright {
   width: 100%;
 }
 
-#btnSection {
-  margin-bottom: 25px;
-  margin-left: 80px;
-}
-
 /* COLORS */
 /* IMAGE FOLDER PATH */
 main {
@@ -139,9 +134,16 @@ form {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.96);
   border-radius: 15px;
 }
+form #login-error, form #signup-error {
+  color: #0000cc;
+}
 
 .icon-remove-styles {
   cursor: pointer;
+  color: #000000;
+}
+.icon-remove-styles:hover {
+  color: #8b0000;
 }
 
 /*# sourceMappingURL=login.css.map */

@@ -7,7 +7,7 @@ html, body {
 }
 
 #error-message {
-  color: white;
+  color: #ffffff;
 }
 
 .wrapper {
@@ -108,11 +108,6 @@ footer .copyright {
   bottom: 2vh;
   right: 2vh;
   width: 100%;
-}
-
-#btnSection {
-  margin-bottom: 25px;
-  margin-left: 80px;
 }
 
 /* COLORS */
