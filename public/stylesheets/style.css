@@ -1,4 +1,6 @@
 /* BASE REUSABLE STYLESHEET */
+/* COLORS */
+/* IMAGE FOLDER PATH */
 html, body {
   min-height: 100%;
 }
@@ -29,6 +31,9 @@ nav {
   padding: 2vh;
   min-width: 100vw;
   display: inline-block;
+}
+nav .btn-logout {
+  margin-left: 1em;
 }
 
 a, button {
@@ -82,10 +87,6 @@ button {
   color: #ffffff;
 }
 
-.btn-logout {
-  margin-left: 1em;
-}
-
 .btn-nav, .btn-logout {
   margin-right: 1.5vw;
   padding: 2em;
@@ -100,18 +101,12 @@ footer {
   position: relative;
   height: 2vh;
 }
-
-.copyright {
+footer .copyright {
   position: absolute;
   font-size: 2vh;
   bottom: 2vh;
   right: 2vh;
   width: 100%;
-}
-
-#btnSection {
-  margin-bottom: 25px;
-  margin-left: 80px;
 }
 
 #btnSection {
