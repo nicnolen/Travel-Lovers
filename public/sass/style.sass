@@ -1,22 +1,11 @@
 /* BASE REUSABLE STYLESHEET */
-
-// Colors 
-$dark-blue: #225ca3
-$red: #ea0028
-$white: #ffffff
-$black: #000000
-$pink: #fA8Bff
-$sky-blue: #2bd2ff
-$light-green: #2bff88
-$light-orange: #ff9a8b
-$purple: #0000cc
-$pink: #ff3399
+@import './variables'
 
 html, body
   min-height: 100%
 
 #error-message
-  color: white
+  color: $white
 
 .wrapper 
   width: 100%
@@ -38,6 +27,8 @@ nav
   padding: 2vh
   min-width: 100vw
   display: inline-block
+  .btn-logout
+    margin-left: 1em
 
 a, button
   text-decoration: none
@@ -83,9 +74,6 @@ button
     background-position: 1px -50px
     color: $white
 
-.btn-logout
-  margin-left: 1em
-
 .btn-nav, .btn-logout
   margin-right: 1.5vw
   padding: 2em
@@ -99,20 +87,9 @@ footer
   clear: both
   position: relative
   height: 2vh
-
-
-.copyright
-  position: absolute
-  font-size: 2vh
-  bottom: 2vh
-  right: 2vh
-  width: 100%
-
-#btnSection
- margin-bottom: 25px
- margin-left: 80px
-  
-
-#btnSection
-  margin-bottom: 25px
-  margin-left: 80px
+  .copyright
+    position: absolute
+    font-size: 2vh
+    bottom: 2vh
+    right: 2vh
+    width: 100%

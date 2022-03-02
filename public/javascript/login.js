@@ -1,6 +1,7 @@
 /* FRONT END JAVASCRIPT CODE FOR THE LOGIN PAGE */
 // Reference error messages
-const errorEl = document.getElementById('error-message');
+const loginErrorEl = document.getElementById('login-error');
+const signupErrorEl = document.getElementById('signup-error')
 
 // HANDLER FUNCTIONS
 // Function to handle signup form
@@ -12,9 +13,6 @@ async function signupFormHandler(event) {
   const password = document.querySelector('#password-signup').value.trim();
 
   if (username && email && password) {
-    // clear error messages
-    errorEl.innerHTML = '';
-
     const response = await fetch('/api/users', {
       method: 'post',
       body: JSON.stringify({
@@ -27,10 +25,10 @@ async function signupFormHandler(event) {
 
     // check response status
     if (response.ok) {
-      errorEl.innerHTML = '';
+      signupErrorEl.innerHTML = '';
       document.location.replace('/dashboard/');
     } else {
-      errorEl.innerHTML = `<b>${response.statusText}:</b> User already exists`;
+      signupErrorEl.innerHTML = `<b>${response.statusText}:</b> User already exists`;
     }
   }
 }
@@ -55,10 +53,10 @@ async function loginFormHandler(event) {
 
     if (response.ok) {
       // clear error
-      errorEl.innerHTML = '';
+      loginErrorEl.innerHTML = '';
       document.location.replace('/dashboard');
     } else {
-      errorEl.innerHTML = `<b>${response.statusText}:</b> User not found`;
+      loginErrorEl.innerHTML = `<b>${response.statusText}:</b> User not found`;
     }
   }
 }
@@ -69,17 +67,20 @@ document
   .querySelector('.signup-form')
   .addEventListener('submit', signupFormHandler);
 
+// Event listener to go to the signup form
 document.getElementById('create-account').addEventListener('click', (event) => {
   event.preventDefault();
   document.querySelector('.signup-form').removeAttribute('style');
   document.querySelector('.login-form').setAttribute('style', 'display: none');
 });
 
+// Event listener to go back to login form
 document.querySelector('.icon-remove-sign').addEventListener('click', (event) => {
   event.preventDefault();
   document.querySelector('.signup-form').setAttribute('style', 'display: none');
   document.querySelector('.login-form').removeAttribute('style');
 });
+
 // Event listener for the login form
 document
   .querySelector('.login-form')
